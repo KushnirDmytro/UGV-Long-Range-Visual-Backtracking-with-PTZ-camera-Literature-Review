@@ -16,3 +16,5 @@ HW and then, in perspective, paper about UGV long range backtracking in Unstruct
 ```bash
 # TODO: add docker requirements and instructions
 ```
+
+## [Draft document composition and content](structure.md)

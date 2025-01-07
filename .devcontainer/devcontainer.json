@@ -1,0 +1,21 @@
+{
+    "name": "TeX Live base",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USER_ID": "${localEnv:UID}",
+            "GROUP_ID": "${localEnv:GID}"
+        }
+    },
+    "postStartCommand": "sudo chown -R $(id -u):$(id -g) /workspaces/${PROJ_DIR_NAME}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop",
+                "tecosaur.latex-utilities",
+                "xyz.local-history",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}

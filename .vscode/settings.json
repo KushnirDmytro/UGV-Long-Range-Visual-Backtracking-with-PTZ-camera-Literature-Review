@@ -1,0 +1,259 @@
+{
+    //* Bracket Pair Colorization */
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#ffd700",
+        "editorBracketHighlight.foreground2": "#ff1491",
+        "editorBracketHighlight.foreground3": "#00bfff",
+        "editorBracketHighlight.foreground4": "#ff8c00",
+        "editorBracketHighlight.foreground5": "#32cd32",
+        "editorBracketHighlight.foreground6": "#ee82ee",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff"
+    },
+
+    //* Files */
+    "files.autoGuessEncoding": false,
+    "files.encoding": "utf8",
+    "files.eol": "auto",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.idea": true,
+        "**/.history": true,
+        "**/*.py[cod]": true,
+        "**/__pycache__": true
+    },
+
+    //! Default Configuration Overrides */
+    "[latex]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.autoIndent": "full",
+        "editor.useTabStops": true,
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.wordWrap": "bounded"
+    },
+    "[markdown]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all"
+    },
+    "[restructuredtext]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all"
+    },
+
+    //* LaTeX Workshop */
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.intellisense.unimathsymbols.enabled": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoBuild.interval": 300000,
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.autoFocus.enabled": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.zoom": "page-width",
+    "latex-workshop.view.pdf.trim": 0,
+    "latex-workshop.view.pdf.external.viewer.command": "okular",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "--unique",
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "okular",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "--noraise",
+        "--unique",
+        "%PDF%#src:%LINE%%TEX%"
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=%OUTDIR%",
+        "%DOC%"
+    ],
+    "latex-workshop.latex.magic.bib.args": [
+        "--output-directory=%OUTDIR%",
+        "%DOCFILE%"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatexmk",
+            "command": "latexmk",
+            "args": [
+                "-pdflatex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "out/%DOCFILE%"
+            ],
+            "env": {
+                "BIBINPUTS": "%OUTDIR%:"
+            }
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+
+        {
+            "name": "Latexmk (PDFLaTeX)",
+            "tools": [
+                "pdflatexmk"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Biber",
+            "tools": [
+                "biber"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "BIBER: PDFLaTeX ➞ Biber ➞ PDFLaTeX × 2",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX ➞ BibTeX ➞ PDFLaTeX × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    // TODO: correcnt auto-text formatting and linting
+    // "latex-workshop.formatting.latex": "tex-fmt",
+
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%",
+        "%TMPFILE%",
+        "-y",
+        "defaultIndent: '%INDENT%', verbatimEnvironments:nameAsRegex:name: '\\w+code\\*?'"
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.xdv",
+        "*.aux",
+        "*.bbl",
+        "*.bcf",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.nav",
+        "*.snm",
+        "*.vrb",
+        "*.run.xml",
+        "*.fdb_latexmk",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "_minted-*/**",
+        "_minted-*/"
+    ],
+
+    //* LaTeX Utilities */
+    "latex-utilities.countWord.format": "${words} Words (${wordsBody} in Body)",
+    "latex-utilities.countWord.args": ["-merge", "%DOC%"],
+    "latex-utilities.formattedPaste.tableBooktabsStyle": true,
+    "latex-utilities.formattedPaste.image.template": "\\includegraphics[width=\\linewidth]{${imageFilePath}}",
+    "latex-utilities.tikzpreview.enabled": true,
+    "latex-utilities.tikzpreview.parseTeXFile": true,
+
+    //* Local History */
+    "local-history.enabled": 2,
+    "local-history.absolute": false,
+    "local-history.path": "${workspaceFolder}/.vscode",
+    "local-history.saveDelay": 120,
+    "local-history.daysLimit": 14,
+    "local-history.treeLocation": "localHistory"
+}

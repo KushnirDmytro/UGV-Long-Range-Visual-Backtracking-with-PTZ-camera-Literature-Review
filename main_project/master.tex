@@ -105,19 +105,6 @@
 
 \comment[does this type of work require "annotation" kind of block?]{}
 
-% \keywords{
-% Active localization \and
-% Outdoor navigation \and
-% Topological mapping \and
-% Unstructured environment \and
-% UGV \and
-% Point of interest \and
-% Visual landmarks \and
-% GPS-denied operation
-% }
-
-% \end{abstract}
-
 \section{Introduction}
 Motivation for the topic of unstructured environments is multifaceted. Industries such as agriculture, mining, and military technology require advancements in autonomous systems, yet are hindered by the lack of open-source tools.
 \todo{Elaborate on why open tools are pivotal for industry advancements and research progress.}
@@ -128,18 +115,17 @@ Motivation for the topic of unstructured environments is multifaceted. Industrie
 \section{Methodology}
 This section outlines the approach to gathering and analyzing the literature.
 
-
-\subsection{Specifc traits of domain literature}
+\subsection{Specific Traits of Domain Literature}
+Research in unstructured UGV robotics exhibits several distinguishing traits:
 \begin{itemize}
-  \item Inclusion of large-scale reviews or almanacs (250+ papers for aggregation).
-  \item Amount of publications are orders of magnitude lower than in mainstream AI.
-  \item Challenge-based (DARPA, MBZIRC) research initiatives. "Clusters" of connected around single problem.
-  \item Long-term researches done by large, well established teams.
-  \item Lack of benchmarks or datasets.
+  \item Large-scale reviews or almanacs (aggregating 250+ papers) play a critical role in providing comprehensive overviews of the field.
+  \item The volume of publications is significantly smaller than in mainstream AI, where research output is orders of magnitude higher.
+  \item Research initiatives, such as DARPA and MBZIRC challenges, drive progress by clustering studies around specific problems.
+  \item Long-term research is typically conducted by well-established teams with access to substantial resources.
+  \item The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
 \end{itemize}
 
-From this we derive conclusion that snowballing approach is not the most effective in those field. Instead regular almanacs, big reviews, and challenge-based researches are sufficient to give navigation in the field.
-
+\subsection{Connectivity in Robotics Research}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{img/There_is_no_place_like_home_research_tree.png}
@@ -147,22 +133,25 @@ From this we derive conclusion that snowballing approach is not the most effecti
   \label{fig:no_place_like_home}
 \end{figure}
 
-Naturally, as problems in a field of robotics include lots of disection reasons: indoor/outdoor, aerial/ground, realtime/non-realtime, etc. -- answering all those quelification questions mean that the tackable "frontier" of research is pin-tip scale. It is marely enough community members to place the large-scale benchmarks and meaningful datasets. This is one of the reasons , why the problems are usually condensed to obvious tasks, that happen to lie beyond the frontiers of modern robotics. "Returning back home" is one of such an everyday problems.
-Sinse there is not much place for terminological mislabeling of such a tasks,  it is easy to find the track of the relevant papers. They are always clustered around research centers, datasets or individual experts. Subsequently, we marely can expect to see the terminological saturation in the field of particular, defined problem. The most cited papers in field of Robotics rarely have 500+ citations ("FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002): ~3,500 citations in 20 years.) , while for AI the 50'000 citations are not incredible anymore ("BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018): ~50,000 citations by 2023.). Therefore the scale of the task is not large enough for the snowballing approach.
+The papers in this field are well connected, and the research is often conducted within "clusters" of research groups. An example of such clustering can be seen in the work of Warren et al. (Figure~\ref{fig:no_place_like_home}), which demonstrates the modest size but tight connections of research within this domain.
 
- The papers are well connected, and the research is done in the "clusters" of research groups. The example of such is the work of Warren et al. \ref{fig:no_place_like_home} and we see here the modest in size and tight in connections are the works in the field.
-Classic citation network analysis is not the best tool for the field, as the papers are well connected and the clusters are small.
+Robotics research often fragments across variables such as indoor versus outdoor environments, aerial versus ground platforms, and real-time versus non-real-time systems. Addressing these distinctions narrows the scope of each research problem, creating a "pin-tip" scale for the research frontier. With a smaller research community, large-scale benchmarks or datasets are often absent.
 
-Thing that metters here is the formulation of the problem, the requirements, that are solved by the design of the solution. The implementation and validation are the next steps, that replace the "benchmarks" in the field of robotics.
+This fragmentation explains why research frequently focuses on specific, everyday tasks that extend beyond current robotics capabilities. One example is the "returning home" problem, a fundamental yet challenging task. Relevant papers on such tasks tend to cluster around research centers, datasets, or individual experts.
+
+Unlike mainstream AI, which experiences terminological saturation, robotics remains more fragmented. For instance, the seminal robotics paper "FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002) has accrued approximately 3,500 citations in 20 years. In contrast, the AI paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018) achieved 50,000 citations in just five years. \todo{Add reference to resourses with citation statistics.}
+
+These differences show that citation-based snowballing approaches are less effective for navigating robotics literature. Instead, comprehensive reviews, challenge-driven studies, and large-scale almanacs are better suited to understanding the field.
+
+What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditioins versatility robustness and iterative improvements.
 
 \comment[Here we will meticulously deconstruct the whole challange into set of requirements, investigate the available set of apporaches, tradeoffs and design the solution aspects. The CORE of literature analysis in robotics will be here. In such a manner we will ensure that we are solving the actual large-scale problem applicable beyond our setup. ]{}
 
 \subsection{Selection Criteria}
+The following criteria guided the selection of papers for this review:
 \begin{itemize}
-  \item Availability of implementations adaptable for our platform or published ground truth data.
-  \item Papers demonstrating superior benchmark performance.
-        \todo{Incorporate specific sources or frameworks, e.g., S. Hausler et al., 2024.}
-  \item Industry standards and tools with robust GitHub presence.
+  \item Preference was given to studies with implementations adaptable to our platform or those offering detailed ground truth data demonstrations.
+  \item Industry standards and widely adopted tools, especially those with robust GitHub repositories, community and versions updates were emphasized to ensure practical relevance and reproducibility.
 \end{itemize}
 
 

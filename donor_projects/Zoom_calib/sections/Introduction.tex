@@ -1,0 +1,128 @@
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+
+% Super-short version, might be usefull
+% \cmt{
+%   Recent advancements in open-source imaging platforms, such as Raspberry Pi-based systems, have enabled cost-effective solutions for autonomous robotics and vision-based applications. However, calibration challenges persist, particularly for zoom lenses in resource-constrained setups. In a recent open-source initiative, we identified inconsistencies in focus calibration, even when using professional equipment. Through problem-driven experimentation, we traced the issue to artifacts introduced by grainy diffuser patterns. This study builds on those insights to propose a scalable, ISO-compliant calibration methodology suitable for both consumer-grade and professional imaging systems.
+% }
+
+% Full version v0,7:
+% \subsection{Problem Statement}
+
+% The increasing ubiquity of autonomous systems heralds the onset of a new era of intelligent devices interacting seamlessly with the physical world. These systems, ranging from autonomous vehicles to robotic vision platforms, rely heavily on precise and reliable sensor calibration to operate effectively in diverse and often unpredictable environments. As autonomy extends into outdoor and real-world scenarios, the burden of engineering complexities, including hardware imperfections and environmental stressors, becomes significant \cite{AutonomousChallenges2020, SensorCalibration2021}.
+
+% A stark illustration of the importance of meticulous calibration can be seen in the pre-flight calibration process for the Mars 2020 rover's Mastcam-Z imaging system \cite{Hayes2021}. NASA's approach involved high-end factory-made equipment, including professional collimators and Siemens Star targets, to ensure imaging reliability in extreme conditions. This underscores the critical role of calibration, particularly for high-stakes applications \cite{ISO12233, DigitalCameraMetrology2020}. However, the sophistication of such equipment is often inaccessible to smaller-scale research and engineering teams, such as those relying on open-source platforms like Raspberry Pi. Without similar high-grade calibration resources, the types of issues addressed by NASA's extensive processes are likely to become widespread in resource-constrained applications \cite{OpenSourceRobotics2019}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/example-image-a} % Replace "example-image-a" with the final collage filename.
+    \caption{Illustration of calibration importance: (a) Siemens Star target used in Mastcam-Z calibration,
+    (b) High-end collimator setup employed by NASA,
+    (c) Comparison of calibration results with and without adequate diffuser quality.}
+    \label{fig:calibration_collage}
+\end{figure}
+
+% The versatility of the Raspberry Pi platform makes it integral to the development of modern autonomous systems. Its low-cost, flexible architecture has transitioned it from a DIY hobbyist tool to a professional solution for imaging systems. For example, industrial-grade modules are available to integrate Raspberry Pi with 25x zoom lenses, enabling applications in robotics, surveillance, and environmental monitoring \cite{IndustrialRPiExample}. These systems are vital for modern and near-future robotics, where scalability and adaptability are paramount \cite{AutonomyRobotics2021}.
+
+% Despite these advancements, Raspberry Pi-based systems face significant calibration challenges. For instance, robotic vision teams employing the Raspberry Pi platform for lens control and image processing use FocusFoM metrics for both calibration and runtime autofocus. While this dual-purpose use promotes consistency, issues such as grainy diffuser artifacts have been observed to affect calibration accuracy. This research addresses these challenges by introducing ISO-compliant calibration procedures and optimizing FocusFoM metrics to ensure robust performance across diverse scenarios \cite{FocusFoM2020, CalibrationArtifacts2018}.
+
+
+% Full version v.1.0
+\subsection{Problem Statement}
+
+\cmt{Here, outline the specific calibration challenges with zoom cameras on Raspberry Pi and the need for FocusFoM. Mention the industry context and motivation for choosing this setup.}
+
+  Autonomous robotics and imaging systems are rapidly advancing across diverse domains such as delivery drones, environmental monitoring, and industrial inspections. A critical challenge in these applications is ensuring the long-term reliability and accuracy of imaging systems operating in dynamic and unpredictable environments. Among imaging components, zoom cameras are particularly vital for consistant observation of the same details, despite varying distances \cite{Atienza2001APZ}. However, maintaining their calibration under real-world conditions, including mechanical wear, environmental factors (e.g., temperature shifts), and actuator aging, remains a significant challenge. Periodic calibration is essential to ensure precise focus across the zoom range and consistent imaging quality.
+
+  Despite the importance of calibration, open-source solutions tailored to resource-constrained teams are limited. Most solutions either rely on expensive proprietary systems or lack sufficient robustness and reproducibility for rigorous research. Recent advancements, such as NASA's meticulous calibration of the Mars 2020 rover Mastcam-Z imaging system, illustrate the impact of high-precision imaging under extreme conditions. The Mastcam-Z employed custom calibration tools, Siemens Star targets, and high-end collimators to guarantee imaging accuracy on the Martian surface~\cite{Hayes2021}. However, these advanced setups are beyond the reach of many teams working with affordable platforms like the \textit{Raspberry Pi} (\textbf{RPi})~\cite{OpenHardware, RaspberryPi_application_review_2024}.
+
+  The RPi platform has gained immense popularity in research and field applications due to its low cost, modularity, and flexibility. It is increasingly paired with zoom-capable lenses in projects like robotic vision, environmental monitoring, and surveillance~\cite{OpenHardware}. While the platform’s accessibility encourages innovation, it also highlights critical gaps in camera calibration reliability. Specifically, the widespread reliance on proprietary tools, such as the \textit{Focus Figure of Merit} (\textbf{FocusFoM}), poses challenges. FocusFoM, a commonly used runtime autofocus metric, is often integrated into calibration processes but operates as a "black box." This lack of transparency complicates the creation of reliable and repeatable calibration protocols or general guidlines for the community.
+
+  Addressing these gaps, this study investigates the limitations of proprietary metrics like FocusFoM and their impact on calibration. By comparing FocusFoM with well-established metrics, such as the \textit{Modulation Transfer Function} (\textbf{MTF})\cite{ISO_12233_Evolution}, we aim to propose improved calibration methods tailored for RPi systems. These methods will adopt ISO-supported standards and emphasize accessibility for resource-constrained teams, enabling precise calibration even under challenging conditions\cite{ALARURI20165820, Bowman2020FlatField, OpenHardware}.
+
+  \begin{figure}[ht]
+      \centering
+      \includegraphics[width=\textwidth]{img/example-image-a} % Replace "example-image-a" with the actual collage filename.
+      \caption{
+        Examples of calibration setups:
+      (a) Siemens Star target used in Mastcam-Z calibration~\cite{ISO_12233_Evolution},
+      (b) A high-end collimator system used by NASA
+      }
+      \label{fig:calibration_collage}
+  \end{figure}
+
+  Figure~\ref{fig:calibration_collage} shows examples of calibration setups to explain the ubiquity of solutions: among Mars surface imitations, we see the same classic bitonal Siemens Star. Such insights guide our efforts to make calibration methods more reliable and accessible.
+
+  \todo[inline]{Add the overview of the upcomming sections here}
+
+\subsection{Digital Camera Focus Calibration}
+  \label{sec:focus_calibration}
+
+  Focus calibration is a specialized aspect of camera calibration aimed at optimizing an imaging system's ability to achieve precise focus under varying conditions. While general calibration encompasses tasks such as color consistency and geometric distortion correction, this work concentrates specifically on focus metrics, particularly within zoom lens systems. Accurate focus calibration is vital for applications where depth of field and sharpness are critical, such as robotic vision and UAV imaging.
+
+
+\subsection{ISO shit}
+
+% - What is focus callibration
+% - Add schematic image from some book
+% - How standards evolved and why useage of MTF is geniusly justified;
+% - Infinity focus callibraiton is specific task. We can simplify for UAVs applocation.
+
+% Also: The explicit use of ISO 12233 and related standards is a strong anchor. However, provide clarity on how your work not only aligns with these standards but extends or challenges them. For instance, mention any gaps in the standards that your methods address.
+% - Yet, zoom camera is not explored. Give obvious problem about scale of the calbration table.
+% - Also ISO goes bananas with elaboration of measurement. Yet some fields would like to have reliable and usable with ease like USAI_1953...
+% - Missing hardware acceleration and hardware misses standards and publicity.
+% Here the "FocusFoM" goes into stage, blaming the research gap.
+% ** Hook to the subsection about surrogate scores -- we need to explore that "constrast" "sharpness"...
+
+
+  \subsection{The Siemens Star in Imaging Calibration}
+  \label{sec:siemens_star}
+
+  The \textit{Siemens Star} pattern, initially introduced as a bitonal target in \textbf{ISO 12233:2000}, has served as a foundational tool for imaging system calibration. Its design, featuring high-contrast radial transitions, enables precise evaluation of \textbf{spatial frequency response (SFR)} and \textbf{modulation transfer function (MTF)}. The bitonal \textit{Siemens Star} is particularly adept at detecting focus-related aberrations, such as \textit{astigmatism} and \textit{field curvature}, due to its sharp edges and high contrast. These qualities make it ideal for manual or semi-automated calibration setups \cite{ISO12233:2000,Loebich2007_SiemensStar}.
+
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/Siemens_star_bitonal.jpg}
+    \caption{Illustration of the \textit{Siemens Star} pattern. The radial lines converging at the center enable precise focus analysis and \textbf{MTF} computation.
+    % Highlighted areas indicate typical regions of interest for detecting aberrations such as \textit{astigmatism} or \textit{field curvature}.}
+    \label{fig:bitonal_siemens_star}
+  \end{figure}
+
+  \paragraph{Evolution to Sinusoidal Patterns}
+  In 2014, \textbf{ISO 12233} introduced the \textit{Sinusoidal Siemens Star}, marking a significant advancement in calibration methodologies. The continuous tonal gradients of this pattern improved the analysis of aliasing and offered superior MTF characterization, aligning with the requirements of modern image quality assessment. Despite these advancements, the original bitonal design retains distinct advantages in specific applications, particularly in \textbf{backlit setups} within \textbf{collimated optical systems}.
+
+  \begin{itemize}
+    \item \textbf{Focus Sensitivity}: The sharp boundaries of the bitonal \textit{Siemens Star} provide heightened sensitivity to focus changes, outperforming sinusoidal gradients in detecting small deviations in optical focus. This sensitivity is especially critical for testing systems under infinity focus conditions \cite{Loebich2007_SiemensStar,EdmundOptics}.
+    \item \textbf{Compatibility with Collimator Testing}: In \textbf{backlit setups}, such as those using collimated optical targets, the bitonal \textit{Siemens Star} is often the only viable option. Its binary contrast ensures clarity and robustness even under uneven illumination or through imperfect optical elements, making it indispensable in such scenarios \cite{Burns2014_ImagingHandbook}.
+  \end{itemize}
+
+  These qualities underscore the continued relevance of the bitonal \textit{Siemens Star} in practical imaging calibration, particularly in scenarios demanding robust optical clarity and high sensitivity to focus shifts.
+
+% V 0.5
+
+
+% \subsection{Raspberry Pi}
+
+% The Raspberry Pi platform has become a cornerstone for imaging applications in modern robotics and automation. Its versatility extends from DIY projects to professional domains, including modular imaging systems, swarm robotics, and environmental monitoring platforms \cite{OpenSourceRobotics2019}. Examples include modular systems like FLIR or Arducam, which integrate Raspberry Pi with zoom-capable lenses to enable professional-grade optical setups for advanced applications \cite{ModularVision2020, FLIRApplications2021}. Such systems illustrate the growing reliance on open-source platforms in both research and industry, highlighting the need for robust and scalable calibration methodologies \cite{DigitalCameraMetrology2020}.
+
+% However, open-source platforms like Raspberry Pi present unique challenges in the calibration of imaging systems. Unlike high-end setups such as NASA's Mastcam-Z calibration process \cite{Hayes2021}, resource-constrained platforms often lack access to professional-grade equipment. Even in setups with ostensibly robust configurations, challenges arise. A neighboring robotics team encountered focus calibration issues using a Raspberry Pi-based imaging system. Their setup, equipped with a professional collimator and Siemens Star reticle, revealed inconsistencies in FocusFoM metrics caused by diffuser artifacts. Such cases underscore the need for methodologies that ensure accuracy and reliability even in non-ideal conditions \cite{FocusFoM2020, CalibrationArtifacts2018}.
+
+
+
+
+% V 1.0
+\subsection{Raspberry Pi}
+
+% The \textit{Raspberry Pi} (\textbf{RPi}) platform is far more than a hobbyist’s tool. With its affordability, modularity, and flexibility, RPi has become a cornerstone for innovation in imaging, robotics, and open-source hardware. Researchers and engineers worldwide are solving real-world problems using this platform, contributing to a growing ecosystem of impactful and scalable solutions. The accessibility and versatility of RPi-based systems are critical as we enter an age defined by autonomous technologies and open hardware~\cite{OpenSourceRobotics2019}.
+
+% One inspiring example is the work by Bowman et al.~\cite{Bowman2020}, who tackled fundamental challenges in the imaging pipeline of the \textit{RPi Camera Module}. Their study focused on flat-field and color correction, developing tools and methods to improve image quality for scientific and technical applications. This work demonstrates how researchers can transform off-the-shelf hardware into precision instruments, addressing imaging issues traditionally reserved for costly, bespoke setups. Their accompanying dataset~\cite{bata764} further highlights their commitment to \textbf{open-source principles}, providing calibration jigs, Python scripts, and hardware design files to enable reproducibility and empower the broader community.
+
+% The scale of \textit{RPi} adoption amplifies the significance of these contributions. With millions of devices in use across diverse domains—from education to robotics—advances in RPi-based imaging systems directly influence the capabilities of countless projects worldwide. For example, \textbf{modular imaging systems} integrating \textit{RPi} with zoom-capable lenses are increasingly applied in surveillance, environmental monitoring, and swarm robotics~\cite{ModularVision2020, OpenSourceRobotics2019}. These platforms demonstrate how open-source tools can drive scientific and economic progress when supported with innovative research and robust methodologies.
+
+% However, these systems face challenges in maintaining imaging quality, particularly under resource constraints or non-ideal conditions. Addressing calibration issues, especially for variable focus and zoom positions, remains critical. This study builds on the legacy of researchers like Bowman et al.~\cite{Bowman2020}, who have shown the value of solving imaging problems in open-source hardware platforms. By investigating metrics like the \textit{Focus Figure of Merit} (\textbf{FocusFoM}), a proprietary but widely used metric, and comparing it with ISO-compliant methods such as the \textit{Modular Transfer Function} (\textbf{MTF})~\cite{ISO12233}, we aim to make calibration more accessible and impactful for the growing community of engineers and researchers relying on \textit{RPi}.
+
+
+\end{document}

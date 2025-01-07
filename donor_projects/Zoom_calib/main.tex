@@ -1,0 +1,204 @@
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+\documentclass[
+% twocolumn,
+hf,
+]{ceurart}
+
+% dkushn: there might be an issue with plugins load order sinse
+%         most of them are loaded above in ceurart
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage
+[
+  colorinlistoftodos,    % Color todos in the list of todos
+  textsize=tiny,         % Set todo text size to tiny
+  % disable,               % Disable all todos (useful for final drafts)
+]{todonotes}
+
+% Increase margin text width
+\setlength{\marginparwidth}{2cm}
+
+\usepackage{scrlayer-scrpage}
+
+% Bibliography:
+\addbibresource{bibliography/standards.bib}
+\addbibresource{bibliography/general.bib}
+\addbibresource{bibliography/intro.bib}
+\addbibresource{bibliography/raspberry.bib}
+\setcounter{page}{1}
+
+% Define custom todo commands
+\newcommand{\fixme}[1]{%
+  \todo[color=red!20, inline, size=\footnotesize]{FIXME: #1}%
+}
+
+\newcommand{\review}[1]{%
+  \todo[color=blue!10, inline, size=\footnotesize]{REVIEW: #1}%
+}
+
+\newcommand{\cmt}[1]{%
+  \todo[color=yellow!10, inline, size=\small]{COMMENT: #1}%
+}
+
+\newcommand{\cmtf}[1]{%
+  \todo[float, color=green!20, size=\small]{COMMENT: #1}%
+}
+
+% With an exclamation mark icon
+\newcommand{\alert}[1]{%
+  \todo[inline, color=orange!30, size=\small, bordercolor=orange!80, linecolor=orange!80]{ALERT: #1}%
+}
+
+
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2024}
+\copyrightclause{Copyright for this paper by its authors.
+	Use permitted under Creative Commons License Attribution 4.0
+	International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{CS\&SE@SW 2024: 7th Workshop for Young Scientists in Computer Science \& Software Engineering, December 27, 2024, Kryvyi Rih, Ukraine}
+
+\title{Refining Focus Calibration Protocols for Optical Zoom Lenses: A Surrogate Metric Approach}
+
+
+\author[1]{Dmytro Kushnir}[%
+orcid=0009-0006-8652-5781,
+email={kushnir_d@ucu.edu.ua},
+url={https://apps.ucu.edu.ua/teachers/dmytro-kushnir-2/}
+]
+
+\author[2]{Maksym Davydov}[%
+orcid=0000-0001-7479-8690,
+email={maks.davydov@ucu.edu.ua},
+url={https://apps.ucu.edu.ua/teachers/maksym-davydov/},
+]
+
+\author[3]{Rostyslav Hryniv}[%
+orcid=0000-0003-0394-9791,
+email={rhryniv@ucu.edu.ua},
+url={https://apps.ucu.edu.ua/teachers/rostyslav-hryniv/},
+]
+
+\todo{Add other athors}
+
+\address[1, 2, 3]{Ukrainian Catholic University Applied Science Faculty, Kozelnytska st., 2a, room 314, Lviv,  79026, Ukraine  }
+
+% \review{dkushn: Тут взязв на себе сміливість просто вказати на всіх одну адресу, можна виправити}
+
+% ============= OUTLINE OF THE STORY =============
+% dkushn: current "master-plan for the paper"
+% Also good to use for LLMs, to give a clear understanding of the paper
+
+% 1. The actual case is following: we were investigating the cases of bad calibration of Zoom lenses, that happen in some \% of experiments of robotic vision team.
+
+% 2. They are young researchers and use opensorce tools. They are using image processing and lense control on Raspberry Pi.  This  platform also computes FocusFoM metric. They used it as the guide for the focus calibration, as the same metric is used for the autofocus during the system runtime and the consistency between those two callibrations would be useful.
+
+% 3. They were working with the professional factory-made collimator and everything looked robust. The retticle used inside was a Siemens Star. We investigated the case and got the hypothesis - the issue was in wrong solution caused by grainy and sharp image of the diffuser.
+
+% 4. We reproduced the setup in the laboratory condition and it end up being confirmed. In this research we want to use ISO-supported MTF metric, ensure valid conditions of the experiment. As well we will investigate the correctness of the correctnes of  the focus position evaluation and etc.
+
+% 7. Also, the calibration procedure itself would be optimized:
+%   a. Optimal quality and compression level of images will be used.
+%   b. We wll ensure the consistency with runtime autofocus, by considering, in addition, exactly that quality of the image that is used in runtime.
+%   c. On each  inspected zoom position we will use optimal number of steps with good initial hypothesis,
+%   d. we will use global measurement context to figure out the best zoom-positions to measure in order to reconstruct the continuous Zoom-Focus curve in the best way.
+
+% 8. In the end of the research we will try our findings and approach adgustments on 3 more lenses to ensure the robustness of conclusions.
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+
+
+\begin{abstract}
+This study addresses the calibration challenges of digital zoom
+lenses utilized in an open-source imaging platform based on Raspberry Pi.
+These systems employ FocusFoM, a runtime focus metric, to guide focus calibration,
+aligning autofocus performance with pre-deployment calibration. Despite using
+professional-grade equipment, including a Siemens Star target and a factory-made
+collimator, inconsistencies in focus calibration were observed in a subset of devices.
+Investigations revealed that artifacts from a grainy and sharp diffuser image could
+mislead the calibration process, resulting in incorrect focus positions.
+
+In this research, we reproduce the setup under controlled laboratory conditions,
+validate the hypothesis using ISO-compliant MTF metrics, and ensure optimal
+experimental conditions. We refine the calibration procedure by evaluating image
+quality, optimizing step sizes, and employing global measurement contexts to
+reconstruct continuous zoom-focus curves. Our methodology is tested on multiple
+lenses to ensure robustness and generalizability. This work contributes to the
+open-source imaging community by providing an optimized and reliable calibration
+approach, enhancing both the accuracy of pre-deployment procedures and the
+consistency of autofocus systems in runtime applications.
+
+\review{This part is worth review by the team to align with vision of the paper}
+
+\end{abstract}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\begin{keywords}
+  Focus Calibration \sep
+  Surrogate Metrics \sep
+  Modular Transfer Function (MTF) \sep
+  ISO 12233 Standards \sep
+  Raspberry Pi Imaging \sep
+  Digital Zoom Cameras \sep
+  Siemens Star Target \sep
+  Global and Local Optimization \sep
+  Imaging System Calibration \sep
+  Contrast Metrics
+\end{keywords}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+\thispagestyle{headings}
+
+\section{Introduction}
+% \subfile{sections/Introduction.tex}
+\section{Methodology}
+% \subfile{sections/Methodology.tex}
+
+\section{Approach}
+% \subfile{sections/Approach.tex}
+
+\section{Results}
+% \subfile{sections/Results.tex}
+
+
+
+%% The acknowledgments section is defined using the "acknowledgments" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+\begin{acknowledgments}
+  \fixme{Acknowlage \textbf{NRFU}}
+	Thanks to the \href{https://github.com/yamadharma/ceurart}{developers of CEURART LaTeX style} and
+	\href{http://ceur-ws.org/CEURWS-TEAM.html}{CEUR-WS.org Management Team} for the inspiration.
+\end{acknowledgments}
+
+
+\appendix
+
+\section{Additional Data}
+\subfile{sections/Appendix.tex}
+
+%%
+%% Define the bibliography file to be used
+% dkushn: migrated to biblatex from natbib
+\printbibliography
+
+
+\end{document}
+
+%%
+%% End of file

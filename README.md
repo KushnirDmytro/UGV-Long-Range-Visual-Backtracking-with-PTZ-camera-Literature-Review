@@ -8,7 +8,7 @@ HW and then, in perspective, paper about UGV long range backtracking in Unstruct
 - [X] Select the theme and compile the sample paper
 - [x] Add task relevant materials for this Assignment
 - [ ] Add the Rubrics for the paper with short annoattions and ToDos
-- [ ] Move in Bibliography from the PhD proposal
+- [+] Move in Bibliography from the PhD proposal
 - [x-] Move in the ZoomCalibration research paper draft materials; Note: has incompatible config with the current project, Fix Later.
 - [ ] Move in relevant MeROS diagrams from the current project and other available images
 - [ ] Launch the Snowballing tool to find more relevant papers (or at least try to do it) -- postponed
@@ -18,6 +18,11 @@ HW and then, in perspective, paper about UGV long range backtracking in Unstruct
 ## Information
 
 - **README.md**: this file.
+
+## To compile use PDF-LaTeX + Biber + PDF-LaTeX + PDF-LaTeX
+![Current compilation interface](image.png)
+
+```bash
 
 ## [Draft document composition and content](readmes/structure.md)
 

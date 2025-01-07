@@ -10,6 +10,7 @@ HW and then, in perspective, paper about UGV long range backtracking in Unstruct
 - [ ] Add the Rubrics for the paper with short annoattions and ToDos
 - [+] Move in Bibliography from the PhD proposal
 - [x-] Move in the ZoomCalibration research paper draft materials; Note: has incompatible config with the current project, Fix Later.
+- [x] Add specific papers for the Literature Review.
 - [ ] Move in relevant MeROS diagrams from the current project and other available images
 - [ ] Launch the Snowballing tool to find more relevant papers (or at least try to do it) -- postponed
 - [ ] Start the paper draft with the structure and the content from the PhD proposal

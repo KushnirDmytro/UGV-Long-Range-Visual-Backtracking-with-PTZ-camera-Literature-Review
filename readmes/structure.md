@@ -85,6 +85,7 @@ those are list of the problems that are connected to the main research gap and a
     - Validation on the real paltform of the technology integration scenario on the Husky UGV platform.
     - Maintanance of the clear comminication interfaces and MeROS documentation. This holds that the technology can be used by the other platforms, that can support given interfaces.
 
+## NOTES
 
 #### Datasets
 - https://csiro-robotics.github.io/Wild-Places

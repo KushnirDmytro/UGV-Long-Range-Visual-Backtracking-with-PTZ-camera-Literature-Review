@@ -29,8 +29,6 @@
 \definecolor{final}{RGB}{0, 128, 0} % Green color for final text
 \definecolor{edit}{RGB}{0, 0, 255} % Blue color for notes or other text
 
-\newcommand{\comment}[2][Comment]{\todo[inline,color=blue!20!white]{\textbf{#1}: #2}}
-\newcommand{\commentside}[2][Comment]{\todo[color=blue!20!white]{\textbf{#1}: #2}}
 
 % Increase margin text width
 \setlength{\marginparwidth}{2cm}
@@ -40,18 +38,16 @@
 % Bibliography:
 \addbibresource{bibliography/phd_proposal.bib}
 
-\addbibresource{bibliography/standards.bib}
-\addbibresource{bibliography/general.bib}
-\addbibresource{bibliography/intro.bib}
-\addbibresource{bibliography/raspberry.bib}
+\addbibresource{bibliography/zoom_calib.bib}
 
 \setcounter{page}{1}
 
-% Define custom todo commands
+% ============== Define custom TODO commands ===========================
+\newcommand{\comment}[2][Comment]{\todo[inline,color=blue!20!white]{\textbf{#1}: #2}}
+\newcommand{\commentside}[2][Comment]{\todo[color=blue!20!white]{\textbf{#1}: #2}}
 \newcommand{\fixme}[1]{%
   \todo[color=red!20, inline, size=\footnotesize]{FIXME: #1}%
 }
-
 \newcommand{\review}[1]{%
   \todo[color=blue!10, inline, size=\footnotesize]{REVIEW: #1}%
 }
@@ -60,6 +56,8 @@
 \newcommand{\alert}[1]{%
   \todo[inline, color=orange!30, size=\small, bordercolor=orange!80, linecolor=orange!80]{ALERT: #1}%
 }
+
+% ============== END: Define custom TODO commands ===========================
 
 \makeatletter
 \AtBeginDocument{%

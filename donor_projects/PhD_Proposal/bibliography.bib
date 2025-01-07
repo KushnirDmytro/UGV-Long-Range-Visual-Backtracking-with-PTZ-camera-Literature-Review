@@ -1,0 +1,836 @@
+@book{texbook,
+  author = {Donald E. Knuth},
+  year = {1986},
+  title = {The {\TeX} Book},
+  publisher = {Addison-Wesley Professional}
+}
+
+@book{latex:companion,
+  author = {Frank Mittelbach and Michel Gossens
+            and Johannes Braams and David Carlisle
+            and Chris Rowley},
+  year = {2004},
+  title = {The {\LaTeX} Companion},
+  publisher = {Addison-Wesley Professional},
+  edition = {2}
+}
+
+@book{latex2e,
+  author = {Leslie Lamport},
+  year = {1994},
+  title = {{\LaTeX}: a Document Preparation System},
+  publisher = {Addison Wesley},
+  address = {Massachusetts},
+  edition = {2}
+}
+
+@inproceedings{lesk:1977,
+  title={Computer Typesetting of Technical Journals on {UNIX}},
+  author={Michael Lesk and Brian Kernighan},
+  booktitle={Proceedings of American Federation of
+             Information Processing Societies: 1977
+             National Computer Conference},
+  pages={879--888},
+  year={1977},
+  address={Dallas, Texas}
+}
+
+Localizability constraint for path planning
+@article{LocalizabilityPathPlanning,
+author = {Liu, Edmond and wang, jingchuan and Chen, Weidong},
+year = {2018},
+month = {08},
+pages = {},
+title = {A Localizability Constraint-Based Path Planning Method for Autonomous Vehicles},
+volume = {PP},
+journal = {IEEE Transactions on Intelligent Transportation Systems},
+doi = {10.1109/TITS.2018.2868377}
+}
+
+Application fields ======START=======
+@article{UAV_applications,
+author = {Lashari, Haque Nawaz and Ali, Husnain Mansoor and Massan, Shafiq-Ur-Rehman},
+year = {2019},
+month = {11},
+pages = {},
+title = {Applications of unmanned aerial vehicles: a review},
+}
+doi = {10.17993/3ctecno.2019.specialissue3.85-105}
+Application fields =======END=======
+
+Fundamental paper of the fundamental researcher.
+https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=9119fc4cb4a4b196602302681ac20e497e571289
+@inproceedings{burgard1997active,
+  title={Active mobile robot localization},
+  author={Burgard, Wolfram and Fox, Dieter and Thrun, Sebastian},
+  booktitle={IJCAI},
+  pages={1346--1352},
+  year={1997},
+  organization={Citeseer}
+}
+
+@article{BurgardActiveMarkovLocaliation,
+title = {Active Markov localization for mobile robots},
+journal = {Robotics and Autonomous Systems},
+volume = {25},
+number = {3},
+pages = {195-207},
+year = {1998},
+note = {Autonomous Mobile Robots},
+issn = {0921-8890},
+author = {Dieter Fox and Wolfram Burgard},
+keywords = {Robot position estimation, Autonomous service robots},
+abstract = {Localization is the problem of determining the position of a mobile robot from sensor data. Most existing localization approaches are passive, i.e., they do not exploit the opportunity to control the robot's effectors during localization. This paper proposes an active localization approach. The approach is based on Markov localization and provides rational criteria for (1) setting the robot's motion direction (exploration), and (2) determining the pointing direction of the sensors so as to most efficiently localize the robot. Furthermore, it is able to deal with noisy sensors and approximative world models. The appropriateness of our approach is demonstrated empirically using a mobile robot in a structured office environment.}
+}
+
+doi = {https://doi.org/10.1016/S0921-8890(98)00049-9},
+url = {https://www.sciencedirect.com/science/article/pii/S0921889098000499},
+
+Particle filter type for localization:
+@inproceedings{milstein2002robust,
+  title={Robust global localization using clustered particle filtering},
+  author={Milstein, Adam and S{\'a}nchez, Javier Nicol{\'a}s and Williamson, Evan Tang},
+  booktitle={AAAI/IAAI},
+  pages={581--586},
+  year={2002}
+}
+
+@inproceedings{AutonomousRoboticExplorationGraph,
+author = {Placed, Julio and Castellanos, Jose},
+year = {2021},
+month = {09},
+pages = {6672-6679},
+title = {Fast Autonomous Robotic Exploration Using the Underlying Graph Structure},
+}
+doi = {10.1109/IROS51168.2021.9636148}
+
+Indoor localization paper: (TODO: check over paywall)
+@article{LandmarkGraphBasedIndoorLoc,
+author = {Gu, Fuqiang and Valaee, Shahrokh and Khoshelham, Kourosh and Shang, Jianga and Zhang, Rui},
+year = {2020},
+month = {05},
+pages = {},
+title = {Landmark Graph-Based Indoor Localization},
+}
+doi = {10.1109/JIOT.2020.2989501}
+
+Similar problems ====START====
+
+
+The most simmilar problem#1 and 2:
+Diff#1: Uses GPS in learning phase
+Diff#2: Uses repetative-over-time pathes to learn robust features (no dedicated feature learning)
+Diff#3: Uses metric navigation (we can't do that)
+@article{warren-ral19-no-place-like-Home,
+title = {There's No Place Like Home: Visual Teach and Repeat for Emergency Return of Multirotor {UAV}s During {GPS} Failure},
+author = {Michael Warren and Melissa Greeff and Bhavit Patel and Jack Collier},
+journal = {{IEEE Robotics and Automation Letters}},
+year = {2019},
+volume = {4},
+number = {1},
+pages = {161--168},
+abstract = {Redundant navigation systems are critical for safe operation of UAVs in high-risk environments. Since most commercial UAVs almost wholly rely on GPS, jamming, interference and multi-pathing are real concerns that usually limit their operations to low-risk environments and VLOS. This paper presents a vision-based route-following system for the autonomous, safe return of UAVs under primary navigation failure such as GPS jamming. Using a Visual Teach and Repeat framework to build a visual map of the environment during an outbound flight, we show the autonomous return of the UAV by visually localising the live view to this map when a simulated GPS failure occurs, controlling the vehicle to follow the safe outbound path back to the launch point. Using gimbal-stabilised stereo vision alone, without reliance on external infrastructure or inertial sensing, Visual Odometry and localisation are achieved at altitudes of 5-25 m and flight speeds up to 55 km/h. We examine the performance of the visual localisation algorithm under a variety of conditions and also demonstrate closed-loop autonomy along a complicated 450 m path.}
+}
+doi = {10.1109/LRA.2018.2883408},
+urllink = {https://arxiv.org/abs/1809.05757},
+urlvideo = {https://youtu.be/oJaQ4ZbvsFw},
+
+The most similar problem#2
+@inbook{GPS-denied-Warren,
+author = {Warren, M. and Paton, M. and MacTavish, K. and Schoellig, Angela and },
+year = {2018},
+month = {01},
+pages = {481-498},
+title = {Towards Visual Teach and Repeat for GPS-Denied Flight of a Fixed-Wing UAV},
+}
+isbn = {978-3-319-67360-8},
+doi = {10.1007/978-3-319-67361-5_31}
+
+
+The most similar problem#3:
+Uses pre-built map from satellite imagery
+Learns DeepFeatures
+Usable only for Hight-altitude flight
+@inproceedings{gurgu2022vision,
+  title={Vision-Based GNSS-Free Localization for UAVs in the Wild},
+  author={Gurgu, Marius-Mihail and Queralta, Jorge Pe{\~n}a and Westerlund, Tomi},
+  booktitle={2022 7th International Conference on Mechanical Engineering and Robotics Research (ICMERR)},
+  pages={7--12},
+  year={2022},
+  organization={IEEE}
+}
+
+The most similar problem#4:
+Pro: works will low-altitude
+Diff#1 Assigns text to features
+Diff#2 Uses text matching
+Diff#3 Tuned for Urban environment (rich with text features)
+@Article{POI_and_store_signature,
+AUTHOR = {Liu, Yu and Bai, Jing and Wang, Gang and Wu, Xiaobo and Sun, Fangde and Guo, Zhengqiang and Geng, Hujun},
+TITLE = {UAV Localization in Low-Altitude GNSS-Denied Environments Based on POI and Store Signage Text Matching in UAV Images},
+JOURNAL = {Drones},
+VOLUME = {7},
+YEAR = {2023},
+NUMBER = {7},
+ARTICLE-NUMBER = {451},
+ISSN = {2504-446X},
+ABSTRACT = {Localization is the most important basic information for unmanned aerial vehicles (UAV) during their missions. Currently, most UAVs use GNSS to calculate their own position. However, when faced with complex electromagnetic interference situations or multipath effects within cities, GNSS signals can be interfered with, resulting in reduced positioning accuracy or even complete unavailability. To avoid this situation, this paper proposes an autonomous UAV localization method for low-altitude urban scenarios based on POI and store signage text matching (LPS) in UAV images. The text information of the store signage is first extracted from the UAV images and then matched with the name of the POI data. Finally, the scene location of the UAV images is determined using multiple POIs jointly. Multiple corner points of the store signage in a single image are used as control points to the UAV position. As verified by real flight data, our method can achieve stable UAV autonomous localization with a positioning error of around 13 m without knowing the exact initial position of the UAV at take-off. The positioning effect is better than that of ORB-SLAM2 in long-distance flight, and the positioning error is not affected by text recognition accuracy and does not accumulate with flight time and distance. Combined with an inertial navigation system, it may be able to maintain high-accuracy positioning for UAVs for a long time and can be used as an alternative to GNSS in ultra-low-altitude urban environments.},
+}
+DOI = {10.3390/drones7070451}
+URL = {https://www.mdpi.com/2504-446X/7/7/451},
+
+
+
+@ARTICLE{GeomMatchinForLoc,
+  author={Mouaddib, E.M. and Marhic, B.},
+  journal={IEEE Transactions on Robotics and Automation},
+  title={Geometrical matching for mobile robot localization},
+  year={2000},
+  volume={16},
+  number={5},
+  pages={542-552},
+  doi={10.1109/70.880804}}
+
+@inproceedings{velez2011planning,
+  title={Planning to perceive: Exploiting mobility for robust object detection},
+  author={Velez, Javier and Hemann, Garrett and Huang, Albert and Posner, Ingmar and Roy, Nicholas},
+  booktitle={Proceedings of the International Conference on Automated Planning and Scheduling},
+  volume={21},
+  pages={266--273},
+  year={2011}
+}
+
+Very similar but indoors:
+@inproceedings{IndoorsSparseLandmarks,
+author = {Nathaniel J. Fairfield and Bruce A. Maxwell},
+title = {{Mobile robot localization with sparse landmarks}},
+volume = {4573},
+booktitle = {Mobile Robots XVI},
+editor = {Douglas W. Gage and Howie M. Choset},
+organization = {International Society for Optics and Photonics},
+publisher = {SPIE},
+pages = {148 -- 155},
+abstract = {This paper describes a mobile robot system designed to explore and map an indoor area such as is encountered in urban search and rescue mock-ups. The robot uses homogeneous artificial landmarks deployed during exploration for localization as it constructs a map, determining landmark distance and bearing with groundplane calculations from a single camera and using Kalman filtering techniques to perform localization. When implemented on a Magellan II mobile robot, the localization technique correctly localized the robot while exploring and mapping.},
+keywords = {localization, Kalman filter, landmark, mobile robot},
+year = {2002},
+}
+doi = {10.1117/12.457439},
+
+Similar problems ====END====
+
+
+Landmarks(beakons)============START=================
+Fundamental on landmarks (beakons)
+@ARTICLE{GeomBeaconsLocalis,
+  author={Leonard, J.J. and Durrant-Whyte, H.F.},
+  journal={IEEE Transactions on Robotics and Automation},
+  title={Mobile robot localization by tracking geometric beacons},
+  year={1991},
+  volume={7},
+  number={3},
+  pages={376-382},
+  abstract={The application of the extended Kaman filter to the problem of mobile robot navigation in a known environment is presented. An algorithm for, model-based localization that relies on the concept of a geometric beacon, a naturally occurring environment feature that can be reliably observed in successive sensor measurements and can be accurately described in terms of a concise geometric parameterization, is developed. The algorithm is based on an extended Kalman filter that utilizes matches between observed geometric beacons and an a priori map of beacon locations. Two implementations of this navigation algorithm, both of which use sonar, are described. The first implementation uses a simple vehicle with point kinematics equipped with a single rotating sonar. The second implementation uses a 'Robuter' mobile robot and six static sonar transducers to provide localization information while the vehicle moves at typical speeds of 30 cm/s.<>},
+  keywords={},
+  month={June}
+}
+
+  doi={10.1109/70.88147},
+  doi={10.1109/70.88147},
+
+Hybrid topological & metric maps:
+@INPROCEEDINGS{HybridTopoMetricMaps,
+  author={Simhon, S. and Dudek, G.},
+  booktitle={Proceedings. 1998 IEEE/RSJ International Conference on Intelligent Robots and Systems. Innovations in Theory, Practice and Applications (Cat. No.98CH36190)},
+  title={A global topological map formed by local metric maps},
+  year={1998},
+  volume={3},
+  number={},
+  pages={1708-1714 vol.3},
+  abstract={We describe a method of mapping large scale static environments using a hybrid topological-metric model. A global map is formed from a set of local maps organized in a topological structure. Each local map contains quantitative environment information using a local reference frame. They are denoted as islands of reliability because they provide accurate metric information of the environment. The mapping problem then becomes where to place the islands of reliability and to what extent should they cover the environment. This is accomplished by defining the placement criteria in terms of the task the islands of reliability portray.},
+  keywords={},
+  ISSN={},
+  month={Oct},}
+
+  doi={10.1109/70.88147},
+
+
+Experiments that confirm that landmarks are helpful for navigation
+@INPROCEEDINGS{LandmarksEffectivenessExperiment,
+author={Meyer-Delius, Daniel and Beinhofer, Maximilian and Kleiner, Alexander and Burgard, Wolfram},
+booktitle={2011 IEEE International Conference on Robotics and Automation},
+title={Using artificial landmarks to reduce the ambiguity in the environment of a mobile robot},
+year={2011},
+volume={},
+number={},
+pages={5173-5178},
+}
+
+doi={10.1109/ICRA.2011.5980111}
+
+@Article{AmbiguityGridMap,
+   Author="Li, G.  and Meng, J.  and Xie, Y.  and Zhang, X.  and Huang, Y.  and Jiang, L.  and Liu, C. ",
+   Title="{{R}eliable and {F}ast {L}ocalization in {A}mbiguous {E}nvironments {U}sing {A}mbiguity {G}rid {M}ap}",
+   Journal="Sensors (Basel)",
+   Year="2019",
+   Volume="19",
+   Number="15",
+   Month="Jul"
+}
+
+
+Foundation paper on Landmarks:
+@ARTICLE{LandmarksFoundation,
+  author={Betke, M. and Gurvits, L.},
+  journal={IEEE Transactions on Robotics and Automation},
+  title={Mobile robot localization using landmarks},
+  year={1997},
+  volume={13},
+  number={2},
+  pages={251-263},
+  abstract={We describe an efficient method for localizing a mobile robot in an environment with landmarks. We assume that the robot can identify these landmarks and measure their bearings relative to each other. Given such noisy input, the algorithm estimates the robot's position and orientation with respect to the map of the environment. The algorithm makes efficient use of our representation of the landmarks by complex numbers. The algorithm runs in time linear in the number of landmarks. We present results of simulations and propose how to use our method for robot navigation.},
+  keywords={},
+  month={April},
+  ISSN={2374-958X},
+  doi={10.1109/70.563647}
+}
+
+Landmarks(beakons)============END=================
+
+
+
+
+Instrumental =============START==================
+Note: VERY popular method , available on git, ros_pkg
+@article{VisualTeachAndRepeat,
+  title={Bridging the appearance gap: Multi-experience localization for long-term visual teach and repeat},
+  author={M. Paton and K. MacTavish and M. Warren and T. Barfoot},
+  journal={International Conference on Intelligent Robots and Systems (IROS)},
+  year={2016},
+  pages={1918-1925}
+}
+
+@ARTICLE{trilateration,
+  author={Thomas, F. and Ros, L.},
+  journal={IEEE Transactions on Robotics},
+  title={Revisiting trilateration for robot localization},
+  year={2005},
+  volume={21},
+  number={1},
+  pages={93-101},
+  abstract={Locating a robot from its distances, or range measurements, to three other known points or stations is a common operation known as trilateration. This problem has been traditionally solved either by algebraic or numerical methods. An approach that avoids the direct algebrization of the problem is proposed here. Using constructive geometric arguments, a coordinate-free formula containing a small number of Cayley-Menger determinants is derived. This formulation accommodates a more thorough investigation of the effects caused by all possible sources of error, including round-off errors, for the first time in this context. New formulas for the variance and bias of the unknown robot location estimation, due to station location and range measurements errors, are derived and analyzed. They are proved to be more tractable compared with previous ones, because all their terms have geometric meaning, allowing a simple analysis of their asymptotic behavior near singularities.},
+  keywords={},
+  month={Feb},}
+  doi={10.1109/TRO.2004.833793},
+  ISSN={1941-0468},
+Instrumental ==============END=================
+
+Conceptual similarities of Idea =============BEGIN=========
+@ARTICLE{RobotForaging,
+  author={Gu, Yu and Strader, Jared and Ohi, Nicholas and Harper, Scott and Lassak, Kyle and Yang, Chizhao and Kogan, Lisa and Hu, Boyi and Gramlich, Matthew and Kavi, Rahul and Gross, Jason},
+  journal={IEEE Robotics & Automation Magazine},
+  title={Robot Foraging: Autonomous Sample Return in a Large Outdoor Environment},
+  year={2018},
+  volume={25},
+  number={3},
+  pages={93-101},
+}
+  doi={10.1109/MRA.2018.2803174}
+Conceptual similarities of Idea =============BEGIN=========
+
+
+Datasets====START========
+Drone imagery for the road extraction from Aerial Images
+@article{nitrdd202Roads,
+    title={The NITRDrone Dataset to Address the Challenges for Road Extraction from Aerial Images},
+    author={Behera, Tanmay Kumar and Bakshi, Sambit and Sa, Pankaj Kumar and Nappi, Michael and Castiglione, Aniello and Vijayakumar, Pandi   and Gupta, Brij},
+    journal = {Journal of Signal Processing Systems},
+    publisher={Springer},
+    year={2021},
+ }
+    note = "doi:10.1007/s11265-022-01777-0"
+
+@online{CLOUDdataset,
+  author = {Dynamic Systems Lab, University of Toronto},
+  title = {CLOUD: Canadian Longterm Outdoor UAV Dataset},
+  year = 2020,
+  url = {https://www.dynsyslab.org/cloud-dataset/},
+  urldate = {2023-08-10}
+}
+@online{UTIAS,
+  author = {Autonomous Space Robotics Lab, University of Toronto},
+  title = {UTIAS dataset},
+  year = 2020,
+  url = {http://asrl.utias.utoronto.ca/datasets/2020-vtr-dataset},
+  urldate = {2023-08-10}
+}
+
+
+TODO: add dataset with movement in circles outdoors
+Datasets====START========
+
+
+Platforms====START======
+@inproceedings{amsters2020turtlebot,
+  title={Turtlebot 3 as a robotics education platform},
+  author={Amsters, Robin and Slaets, Peter},
+  booktitle={Robotics in Education: Current Research and Innovations 10},
+  pages={170--181},
+  year={2020},
+  organization={Springer}
+}
+Platforms=====END=======
+
+
+
+Simmulators====START====а
+@article{ROS2,
+    author = {Steven Macenski  and Tully Foote  and Brian Gerkey  },
+    title = {Robot Operating System 2: Design, architecture, and uses in the wild},
+    journal = {Science Robotics},
+    volume = {7},
+    number = {66},
+    pages = {eabm6074},
+    year = {2022},
+}
+    doi = {10.1126/scirobotics.abm6074},
+    URL = {https://www.science.org/doi/abs/10.1126/scirobotics.abm6074}
+@inproceedings{Gazebo,
+  title={Design and use paradigms for gazebo, an open-source multi-robot simulator},
+  author={Koenig, Nathan and Howard, Andrew},
+  booktitle={2004 IEEE/RSJ international conference on intelligent robots and systems (IROS)},
+  volume={3},
+  pages={2149--2154},
+  year={2004},
+  organization={IEEE}
+}
+Nvida's Isaac Sim and robotics
+@inproceedings{monteiro2019simulating,
+  title={Simulating real robots in virtual environments using NVIDIA’s Isaac SDK},
+  author={Monteiro, Filipe Figueredo and Vieira, Andre Luiz Buarque and Teixeira, Jo{\~a}o Marcelo Xavier Nat{\'a}rio and Teichrieb, Veronica and others},
+  booktitle={Anais Estendidos do XXI Simp{\'o}sio de Realidade Virtual e Aumentada},
+  pages={47--48},
+  year={2019},
+  organization={SBC}
+}
+Pegasus: drone framework for IsaacSim
+@article{jacinto2023pegasus,
+  title={Pegasus Simulator: An Isaac Sim Framework for Multiple Aerial Vehicles Simulation},
+  author={Jacinto, Marcelo and Pinto, Jo{\~a}o and Patrikar, Jay and Keller, John and Cunha, Rita and Scherer, Sebastian and Pascoal, Ant{\'o}nio},
+  journal={arXiv preprint arXiv:2307.05263},
+  year={2023}
+}
+
+Usage of Google Earth imagery for UAV navigation
+@INPROCEEDINGS{patel-icra20,
+title = {Visual Localization with {Google Earth} Images for Robust Global Pose Estimation of {UAV}s},
+author = {Bhavit Patel and Timothy D. Barfoot and Angela P. Schoellig},
+booktitle = {{Proc. of the IEEE International Conference on Robotics and Automation (ICRA)}},
+year = {2020},
+pages = {6491--6497},
+urlvideo = {https://tiny.cc/GElocalization},
+abstract = {We estimate the global pose of a multirotor UAV by visually localizing images captured during a flight with Google Earth images pre-rendered from known poses. We metrically localize real images with georeferenced rendered images using a dense mutual information technique to allow accurate global pose estimation in outdoor GPS-denied environments. We show the ability to consistently localize throughout a sunny summer day despite major lighting changes while demonstrating that a typical feature-based localizer struggles under the same conditions. Successful image registrations are used as measurements in a filtering framework to apply corrections to the pose estimated by a gimballed visual odometry pipeline. We achieve less than 1 metre and 1 degree RMSE on a 303 metre flight and less than 3 metres and 3 degrees RMSE on six 1132 metre flights as low as 36 metres above ground level conducted at different times of the day from sunrise to sunset.}
+}
+Simmulator=====END======
+
+Emboddied AI lab:
+@unknown{PointGoalNavUCU,
+author = {Partsey, Ruslan and Wijmans, Erik and Yokoyama, Naoki and Dobosevych, Oles and Batra, Dhruv and Maksymets, Oleksandr},
+year = {2022},
+month = {06},
+pages = {},
+title = {Is Mapping Necessary for Realistic PointGoal Navigation?},
+}
+doi = {10.48550/arXiv.2206.00997}
+
+
+Imaging START--------------------
+@article{10.1109/34.910880,
+author = {Peleg, Shmuel and Ben-Ezra, Moshe and Pritch, Yael},
+title = {Omnistereo: Panoramic Stereo Imaging},
+year = {2001},
+issue_date = {March 2001},
+publisher = {IEEE Computer Society},
+address = {USA},
+volume = {23},
+number = {3},
+issn = {0162-8828},
+url = {https://doi.org/10.1109/34.910880},
+doi = {10.1109/34.910880},
+abstract = {An Omnistereo panorama consists of a pair of panoramic images, where one panorama is for the left eye and another panorama is for the right eye. The panoramic stereo pair provides a stereo sensation up to a full 360 degrees. Omnistereo panoramas cannot be photographed by two omnidirectional cameras from two viewpoints, but can be constructed by mosaicing together images from a rotating stereo pair. A more convenient approach to generate omnistereo panoramas is by mosaicing images from a single rotating camera. This approach also enables the control of stereo disparity, giving larger baselines for faraway scenes, and a smaller baseline for closer scenes. Capturing panoramic omnistereo images with a rotating camera makes it impossible to capture dynamic scenes at video rates and limits omnistereo imaging to stationary scenes. We, therefore, present two possibilities for capturing omnistereo panoramas using optics without any moving parts. A special mirror is introduced such that viewing the scene through this mirror creates the same rays as those used with the rotating cameras. A lens for omnistereo panorama is also introduced. The designs of the mirror and of the lens are based on curves whose caustic is a circle. Omnistereo panoramas can also be rendered by computer graphics methods to represent virtual environments.},
+journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+month = {mar},
+pages = {279–290},
+numpages = {12},
+keywords = {Stereo imaging, image mosaicing., panoramic imaging}
+}
+IMAGING ==================== END ===========================
+
+Platforms:
+@misc{clearpath_husky_ugv,
+  author = {{Clearpath Robotics}},
+  title = {Husky Unmanned Ground Vehicle - Outdoor Field Research Robot},
+  year = {2024},
+  url = {https://clearpathrobotics.com/husky-unmanned-ground-vehicle-outdoor-research/},
+  note = {Accessed: 2024-06-11}
+}
+
+
+% Related work:
+@BOOK{OmnidirectionalStereovision_Schoenbein2015,
+  title     = "Omnidirectional stereo vision for autonomous vehicles",
+  author    = "{Schoenbein} and {Miriam}",
+  publisher = "KIT Scientific Publishing",
+  month     =  apr,
+  year      =  2015,
+  address   = "Karlsruhe, Germany",
+  language  = "en"
+}
+
+
+@misc{barath2019magsac,
+      title={MAGSAC++, a fast, reliable and accurate robust estimator},
+      author={Daniel Barath and Jana Noskova and Maksym Ivashechkin and Jiri Matas},
+      year={2019},
+      eprint={1912.05909},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@article{AutomatedBridgeInspection_UGV_2019,
+author = {Charron, Nicholas and McLaughlin, Evan and Phillips, Stephen and Goorts, Kevin and Narasimhan, Sriram and Waslander, Steven},
+year = {2019},
+month = {11},
+pages = {04019137},
+title = {Automated Bridge Inspection Using Mobile Ground Robotics},
+volume = {145},
+journal = {Journal of Structural Engineering},
+doi = {10.1061/(ASCE)ST.1943-541X.0002404}
+}
+
+@inproceedings{TEB_Planner,
+  title={Integrated Online Trajectory Planning and Optimization in Distinctive Topologies},
+  author={Rösmann, C. and Hoffmann, F. and Bertram, T.},
+  booktitle={2012 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  pages={4387-4393},
+  year={2013},
+  organization={IEEE}
+}
+
+@misc{move_base_flex,
+author = {{Move Base Flex Contributors}},
+title = {Move Base Flex},
+year = {2024},
+url = {https://github.com/magazino/move_base_flex},
+note = {Accessed: 2024-06-11}
+}
+
+@misc{hokuyo_utm_30lx_ew,
+  author = {{Hokuyo Automatic Co., Ltd.}},
+  title = {UTM-30LX-EW Scanning Laser Rangefinder},
+  year = {2024},
+  url = {https://www.hokuyo-aut.jp/search/single.php?serial=166},
+  note = {Accessed: 2024-06-11}
+}
+
+@article{RangeSensorsEvalutation,
+author = {Singh, Ravinder and Nagla, Kuldeep},
+year = {2019},
+month = {10},
+pages = {},
+title = {Comparative analysis of range sensors for the robust autonomous navigation – a review},
+volume = {ahead-of-print},
+journal = {Sensor Review},
+doi = {10.1108/SR-01-2019-0029}
+}
+
+@Inbook{UTM_30LX_Demski2013,
+author="Demski, Piotr
+and Mikulski, Micha{\l}
+and Koteras, Roman",
+editor="Nawrat, Aleksander
+and Simek, Krzysztof
+and {\'{S}}wierniak, Andrzej",
+title="Characterization of Hokuyo UTM-30LX Laser Range Finder for an Autonomous Mobile Robot",
+bookTitle="Advanced Technologies for Intelligent Systems of National Border Security",
+year="2013",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="143--153",
+abstract="One of the most common problems of autonomous mobile robots is object avoidance in a dynamically changing environment. The effectiveness of algorithms responsible for trajectory planing is largely dependent on the correct sensory input. It is necessary to equip a mobile robot with the proper sensors to allow a correct functioning in unknown terrain. With the high degree of complexity standard point distance sensors are insufficient for high speed movement. The recent development of compact laser range finders allowed the minimization of robot dimensions. Hokuyo UTM-30LX is an example of such a sensor. For a precise understanding of the measurements, a characterization of a sensor is needed. This paper is summarizes the parameters of Hokuyo UTM-30LX laser range finder, in particular: drift effect, influence of target distance, surface brightness, color and material, and the sensor orientation. The parameters measured prove that the Hokuyo UTM-30LX can be used in a mobile robot system for complex object detection and avoidance.",
+isbn="978-3-642-31665-4",
+doi="10.1007/978-3-642-31665-4_12",
+url="https://doi.org/10.1007/978-3-642-31665-4_12"
+}
+
+@misc{fixposition_vision_rtk2,
+  author = {{Fixposition AG}},
+  title = {Vision-RTK 2},
+  year = {2024},
+  url = {https://docs.fixposition.com/fd/how-the-vision-rtk-2-works},
+  note = {Accessed: 2024-06-11}
+}
+
+@misc{kurokesu_l085_devkit,
+  author = {{Kurokesu}},
+  title = {L085-DEVKIT: Motorized Zoom Lens Development Kit},
+  year = {2024},
+  url = {https://www.kurokesu.com/shop/L085-DEVKIT},
+  note = {Accessed: 2024-06-11}
+}
+
+@article{morrison_coded_apperture_2009vision,
+  title={Performance Evaluation of Vision Aided Inertial Navigation System Augmented with a Coded Aperture},
+  author={J. R. Morrison, J. Raquet, M. Veth},
+  journal={},
+  year={2009}
+}
+
+@article{Navigation_Large_Unstructured_environments,
+author = {Guivant, Jose and Nebot, Eduardo and Nieto, Juan and Masson, Favio},
+year = {2004},
+month = {04},
+pages = {449-472},
+title = {Navigation and Mapping in Large Unstructured Environments},
+volume = {23},
+journal = {I. J. Robotic Res.},
+doi = {10.1177/0278364904042203}
+}
+
+% Mapping new:
+@inproceedings{GistOfMaps_inproceedings,
+author = {Dymczyk, Marcin and Lynen, Simon and Cieslewski, Titus and Bosse, Michael and Siegwart, Roland and Furgale, Paul},
+year = {2015},
+month = {06},
+pages = {2767-2773},
+title = {The gist of maps - Summarizing experience for lifelong localization},
+volume = {2015},
+journal = {Proceedings - IEEE International Conference on Robotics and Automation},
+doi = {10.1109/ICRA.2015.7139575}
+}
+
+@ARTICLE{SummaryMaps_lLifelong_localization_Mühlfellner2016561,
+author = {Mühlfellner, Peter and Bürki, Mathias and Bosse, Michael and Derendarz, Wojciech and Philippsen, Roland and Furgale, Paul},
+title = {Summary Maps for Lifelong Visual Localization},
+year = {2016},
+journal = {Journal of Field Robotics},
+volume = {33},
+number = {5},
+pages = {561 – 590},
+doi = {10.1002/rob.21595},
+url = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-84931069651&doi=10.1002%2Frob.21595&partnerID=40&md5=42e1dd551bdb31f08dbc661d2e3a7100},
+affiliations = {Department for Driver Assistance and Integrated Safety, Volkswagen AG, Halmstad University, Letter Box 011/1777, Wolfsburg, Germany; Autonomous Systems Lab, ETH Zürich, Leonhardstrasse 21, Zürich, Switzerland; Department for Driver Assistance and Integrated Safety, Volkswagen AG, Letter Box 011/1777, Wolfsburg, Germany; Intelligent Systems Lab, Halmstad University, Kristian IV's väg 3, Halmstad, Sweden},
+abstract = {Robots that use vision for localization need to handle environments that are subject to seasonal and structural change, and operate under changing lighting and weather conditions. We present a framework for lifelong localization and mapping designed to provide robust and metrically accurate online localization in these kinds of changing environments. Our system iterates between offline map building, map summary, and online localization. The offline mapping fuses data from multiple visually varied datasets, thus dealing with changing environments by incorporating new information. Before passing these data to the online localization system, the map is summarized, selecting only the landmarks that are deemed useful for localization. This Summary Map enables online localization that is accurate and robust to the variation of visual information in natural environments while still being computationally efficient. We present a number of summary policies for selecting useful features for localization from the multisession map, and we explore the tradeoff between localization performance and computational complexity. The system is evaluated on 77 recordings, with a total length of 30 kilometers, collected outdoors over 16 months. These datasets cover all seasons, various times of day, and changing weather such as sunshine, rain, fog, and snow. We show that it is possible to build consistent maps that span data collected over an entire year, and cover day-to-night transitions. Simple statistics computed on landmark observations are enough to produce a Summary Map that enables robust and accurate localization over a wide range of seasonal, lighting, and weather conditions. © 2015 Wiley Periodicals, Inc.},
+keywords = {Computer vision; Data visualization; Lighting; Mapping; Meteorology; Changing environment; Computationally efficient; Localization and mappings; Localization performance; Natural environments; On-line localization; Visual information; Visual localization; Social networking (online)},
+correspondence_address = {P. Mühlfellner; Department for Driver Assistance and Integrated Safety, Volkswagen AG, Halmstad University, Wolfsburg, Letter Box 011/1777, Germany; email: peter.muehlfellner@volkswagen.de},
+publisher = {John Wiley and Sons Inc.},
+issn = {15564959},
+language = {English},
+abbrev_source_title = {J. Field. Rob.},
+type = {Article},
+publication_stage = {Final},
+source = {Scopus},
+note = {Cited by: 73}
+}
+
+@article{LighingInvariantAdaptiveRouteFollowing,
+author = {Krüsi, Philipp and Bücheler, Bastian and Pomerleau, François and Schwesinger, Ulrich and Siegwart, Roland and Furgale, Paul},
+year = {2014},
+month = {06},
+pages = {},
+title = {Lighting-invariant Adaptive Route Following Using Iterative Closest Point Matching},
+volume = {32},
+journal = {Journal of Field Robotics},
+doi = {10.1002/rob.21524}
+}
+
+@inproceedings{RelationalDB_for_MAP_Mhlfellner2015DesigningAR,
+title={Designing a Relational Database for Long-Term Visual Mapping},
+author={Peter M{\"u}hlfellner and Paul Timothy Furgale and Wojciech Derendarz and Roland Philippsen},
+year={2015},
+url={https://api.semanticscholar.org/CorpusID:60267663}
+}
+
+@inproceedings{FastExploration_Graph_Placed_2021,
+title={Fast Autonomous Robotic Exploration Using the Underlying Graph Structure},
+url={http://dx.doi.org/10.1109/IROS51168.2021.9636148},
+DOI={10.1109/iros51168.2021.9636148},
+booktitle={2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+publisher={IEEE},
+author={Placed, Julio A. and Castellanos, Jose A.},
+year={2021},
+month=sep }
+
+
+@article{NavMapping_large_unstructured_env,
+author = {Guivant, Jose and Nebot, Eduardo and Nieto, Juan and Masson, Favio},
+year = {2004},
+month = {04},
+pages = {449-472},
+title = {Navigation and Mapping in Large Unstructured Environments},
+volume = {23},
+journal = {I. J. Robotic Res.},
+doi = {10.1177/0278364904042203}
+}
+
+@inproceedings{PlacePlaceRecognition,
+author = {Lynen, Simon and Bosse, Mike and Furgale, Paul and Siegwart, Roland},
+year = {2014},
+month = {01},
+pages = {},
+title = {Placeless Place-Recognition}
+}
+
+@misc{lin2022adapt,
+title={ADAPT: Vision-Language Navigation with Modality-Aligned Action Prompts},
+author={Bingqian Lin and Yi Zhu and Zicong Chen and Xiwen Liang and Jianzhuang Liu and Xiaodan Liang},
+year={2022},
+eprint={2205.15509},
+archivePrefix={arXiv},
+primaryClass={cs.CV}
+}
+
+@inproceedings{Zhou2023NavGPTER,
+  title={NavGPT: Explicit Reasoning in Vision-and-Language Navigation with Large Language Models},
+  author={Gengze Zhou and Yicong Hong and Qi Wu},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  year={2023},
+  url={https://api.semanticscholar.org/CorpusID:258947250}
+}
+
+@article{Panoramic_Stereo_Imaging_HUANG1998196,
+title = {Panoramic Stereo Imaging System with Automatic Disparity Warping and Seaming},
+journal = {Graphical Models and Image Processing},
+volume = {60},
+number = {3},
+pages = {196-208},
+year = {1998},
+issn = {1077-3169},
+doi = {https://doi.org/10.1006/gmip.1998.0467},
+url = {https://www.sciencedirect.com/science/article/pii/S1077316998904671},
+author = {Ho-Chao Huang and Yi-Ping Hung},
+abstract = {Two commonly used approaches for building a virtual reality (VR) world are the model-based approach and the image-based approach. Recently, the image-based approach has received much attention for its advantages of being easier to build a VR model and of being able to provide photo-realistic views. However, traditional image-based VR systems cannot produce the stereo views that can give the users the feeling of 3D depth. In this paper, we present a panoramic stereo imaging (PSI) system which can produce stereo panoramas for image-based VR systems. This PSI system is referred to as the PSI-II system, which is an improved system of our previous experimental PSI-I system. The PSI-I system uses a well-calibrated tripod system to acquire a series of stereo image pairs, while the PSI-II system does not require the use of a well-calibrated tripod system and can automatically generate a stereo-pair of panoramic images by using a novel disparity warping technique and a hierarchical seaming algorithm. Our PSI-II system can automatically correct the epipolar-line inconsistency of the stereo images pairs and the image disparity caused by the dislocation of the camera's lens center in the image acquisition process. Our experiments have shown that the proposed method can easily provide realistic 360° panoramic views for image-based VR systems.}
+}
+
+@article{Omnistereo_Shmuel,
+author = {Peleg, Shmuel and Ben-Ezra, Moshe and Pritch, Yael},
+title = {Omnistereo: Panoramic Stereo Imaging},
+year = {2001},
+issue_date = {March 2001},
+publisher = {IEEE Computer Society},
+address = {USA},
+volume = {23},
+number = {3},
+issn = {0162-8828},
+url = {https://doi.org/10.1109/34.910880},
+doi = {10.1109/34.910880},
+abstract = {An Omnistereo panorama consists of a pair of panoramic images, where one panorama is for the left eye and another panorama is for the right eye. The panoramic stereo pair provides a stereo sensation up to a full 360 degrees. Omnistereo panoramas cannot be photographed by two omnidirectional cameras from two viewpoints, but can be constructed by mosaicing together images from a rotating stereo pair. A more convenient approach to generate omnistereo panoramas is by mosaicing images from a single rotating camera. This approach also enables the control of stereo disparity, giving larger baselines for faraway scenes, and a smaller baseline for closer scenes. Capturing panoramic omnistereo images with a rotating camera makes it impossible to capture dynamic scenes at video rates and limits omnistereo imaging to stationary scenes. We, therefore, present two possibilities for capturing omnistereo panoramas using optics without any moving parts. A special mirror is introduced such that viewing the scene through this mirror creates the same rays as those used with the rotating cameras. A lens for omnistereo panorama is also introduced. The designs of the mirror and of the lens are based on curves whose caustic is a circle. Omnistereo panoramas can also be rendered by computer graphics methods to represent virtual environments.},
+journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+month = {mar},
+pages = {279–290},
+numpages = {12},
+keywords = {Stereo imaging, image mosaicing., panoramic imaging}
+}
+
+@article{3D_Scene_Multibaseline_stereo,
+author = {Kang, Sing Bing and Szeliski, Richard},
+year = {1997},
+month = {01},
+pages = {167-183},
+title = {3-D Scene Data Recovery Using Omnidirectional Multibaseline Stereo},
+volume = {25},
+journal = {International Journal of Computer Vision},
+doi = {10.1023/A:1007971901577}
+}
+
+# Patent
+@article{Coded_Aperture_morrison2009vision,
+title={Performance Evaluation of Vision Aided Inertial Navigation System Augmented with a Coded Aperture},
+author={J. R. Morrison, J. Raquet, M. Veth},
+journal={},
+year={2009}
+}
+
+@article{PanoramicVirtualStereoVision_3dLocalizationMovingBots,
+author = {Zhu, Zhigang and Rajasekar, K. and Riseman, Edward and Hanson, Allen},
+year = {2000},
+month = {05},
+pages = {},
+title = {Panoramic Virtual Stereo Vision of Cooperative Mobile Robots for Localizing 3D Moving Objects}
+}
+
+@INPROCEEDINGS{SearchAndTrackingGimbal,
+  author={Skjong, Espen and Nundal, Stian Aas and Leira, Frederik Stendahl and Johansen, Tor Arne},
+  booktitle={2015 International Conference on Unmanned Aircraft Systems (ICUAS)},
+  title={Autonomous search and tracking of objects using model predictive control of unmanned aerial vehicle and gimbal: Hardware-in-the-loop simulation of payload and avionics},
+  year={2015},
+  volume={},
+  number={},
+  pages={904-913},
+  keywords={Cameras;Search problems;Trajectory;Object tracking;Payloads;Attitude control},
+  doi={10.1109/ICUAS.2015.7152377}
+}
+
+@INPROCEEDINGS{PointMeIntoRightDirection,
+author={Patel, Bhavit and Warren, Michael and Schoellig, Angela},
+booktitle={2019 16th Conference on Computer and Robot Vision (CRV)},
+title={Point Me In The Right Direction: Improving Visual Localization on UAVs with Active Gimballed Camera Pointing},
+year={2019},
+volume={},
+number={},
+pages={105-112},
+keywords={Cameras;Visualization;Transforms;Global Positioning System;Autonomous robots;Robustness;Sensors;gimballed camera;localization;autonomous UAV;viewpoint manipulation},
+doi={10.1109/CRV.2019.00022}
+}
+
+@INPROCEEDINGS{InformativePathPlannin_under_uncertainty,
+  author={Popović, Marija and Vidal-Calleja, Teresa and Chung, Jen Jen and Nieto, Juan and Siegwart, Roland},
+  booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)},
+  title={Informative Path Planning for Active Field Mapping under Localization Uncertainty},
+  year={2020},
+  volume={},
+  number={},
+  pages={10751-10757},
+  keywords={Uncertainty;Planning;Robot sensing systems;Trajectory;Manuals;Robot localization},
+  doi={10.1109/ICRA40945.2020.9197034}}
+
+@article{AutomaticallyAnnotatedOutdoorsGazebo,
+author = {Sanchez, Manuel and Morales, J. and Martínez, Jorge and Fernández-Lozano, J.},
+year = {2022},
+month = {07},
+pages = {},
+title = {Automatically Annotated Dataset of a Ground Mobile Robot in Natural Environments via Gazebo Simulations},
+volume = {Sensors},
+journal = {Sensors},
+doi = {10.3390/s22155599}
+}
+
+
+@Article{ParisCarla3D,
+AUTHOR = {Deschaud, Jean-Emmanuel and Duque, David and Richa, Jean Pierre and Velasco-Forero, Santiago and Marcotegui, Beatriz and Goulette, François},
+TITLE = {Paris-CARLA-3D: A Real and Synthetic Outdoor Point Cloud Dataset for Challenging Tasks in 3D Mapping},
+JOURNAL = {Remote Sensing},
+VOLUME = {13},
+YEAR = {2021},
+NUMBER = {22},
+ARTICLE-NUMBER = {4713},
+URL = {https://www.mdpi.com/2072-4292/13/22/4713},
+ISSN = {2072-4292},
+ABSTRACT = {Paris-CARLA-3D is a dataset of several dense colored point clouds of outdoor environments built by a mobile LiDAR and camera system. The data are composed of two sets with synthetic data from the open source CARLA simulator (700 million points) and real data acquired in the city of Paris (60 million points), hence the name Paris-CARLA-3D. One of the advantages of this dataset is to have simulated the same LiDAR and camera platform in the open source CARLA simulator as the one used to produce the real data. In addition, manual annotation of the classes using the semantic tags of CARLA was performed on the real data, allowing the testing of transfer methods from the synthetic to the real data. The objective of this dataset is to provide a challenging dataset to evaluate and improve methods on difficult vision tasks for the 3D mapping of outdoor environments: semantic segmentation, instance segmentation, and scene completion. For each task, we describe the evaluation protocol as well as the experiments carried out to establish a baseline.},
+DOI = {10.3390/rs13224713}
+}
+
+@misc{sampathkrishna2022aruco,
+title={ArUco Maker based localization and Node graph approach to mapping},
+author={Abhijith Sampathkrishna},
+year={2022},
+eprint={2208.09355},
+archivePrefix={arXiv},
+primaryClass={cs.RO}
+}
+
+@article{Geiger2013IJRR,
+  author = {Andreas Geiger and Philip Lenz and Christoph Stiller and Raquel Urtasun},
+  title = {Vision meets Robotics: The KITTI Dataset},
+  journal = {International Journal of Robotics Research (IJRR)},
+  year = {2013}
+}

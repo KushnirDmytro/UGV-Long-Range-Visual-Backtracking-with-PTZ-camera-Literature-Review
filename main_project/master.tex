@@ -43,7 +43,11 @@
 
 \setcounter{page}{1}
 
+
+%
 % ============== Define custom TODO commands ===========================
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny, disable]{todonotes}
+
 \newcommand{\comment}[2][Comment]{\todo[inline,color=blue!20!white]{\textbf{#1}: #2}}
 \newcommand{\commentside}[2][Comment]{\todo[color=blue!20!white]{\textbf{#1}: #2}}
 \newcommand{\fixme}[1]{%
@@ -74,8 +78,6 @@
 
 %\urlstyle{same}
 
-%
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny, disable]{todonotes}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -154,14 +156,14 @@ Challenges-based research in robotics emphasizes organized progress, such as DAR
 
 \section{State-of-the-Art}
 
-\comment[]{Larger piece for ROS. Other will be detailed in similar fashion + references.}
+\comment{Larger piece for ROS. Other will be detailed in similar fashion + references}
+
 \subsection{The Critical Role of the ROS Platform}
 The Robot Operating System (ROS) has emerged as a cornerstone technology in the robotics field, providing an open-source framework that standardizes development and fosters collaboration across academia and industry. Its modular architecture allows researchers and developers to integrate diverse hardware and software components, enabling rapid prototyping and scalability for a wide range of applications.
 
 One of ROS's most significant contributions is its community-driven ecosystem, where shared libraries, tools, and documentation accelerate innovation. ROS supports real-time applications, bridging the gap between laboratory research and field deployment. This feature has proven particularly valuable in unstructured environments, where dynamic conditions demand robust and flexible solutions. Moreover, the adoption of ROS by industry leaders has enhanced its relevance, making it a platform that seamlessly connects academic research with practical deployment.
 
 In the context of this review, ROS plays a pivotal role in the development of modular designs, such as the MeROS framework. By leveraging ROS's tools for sensor integration, motion planning, and communication, MeROS exemplifies how a standardized platform can streamline the design and validation of complex robotic systems. However, despite its strengths, ROS is not without limitations. Challenges such as real-time processing constraints, hardware compatibility, and dependency management persist, leaving room for further enhancements.
-
 
 \subsection{Mapping Approaches}
 Summarize current techniques in mapping for unstructured environments.
@@ -172,12 +174,15 @@ Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and
 \todo{Include examples of modular designs and calibrations.}
 
 \subsection{Public and Private SOTA}
-Contrast public SOTA with proprietary solutions. Highlight the reproducibility crisis in academia due to platform-locked tools.
+Contrast public SOTA with proprietary solutions. Highlight the reproducibility crisis in robotics academia due to platform-locked tools.
 \todo{Explore the coined term "Public SOTA" and its implications.}
 
 \section{Research Gaps}
 \subsection{Task-Requirement-Design Identification}
-Critical problems include:
+
+Core research gaps
+\comment[We will concentrate our research efforts on them specifically]{}
+
 \begin{itemize}
     \item PTZ camera integration challenges.
     \item Long-range navigation in unstructured environments:
@@ -192,11 +197,17 @@ Critical problems include:
 \todo{Explore solutions like 360-degree cameras or alternative configurations.}
 
 \subsection{Constraints and Challenges}
+\comment[Those are factors that can have decisive impact on feasibility of the work and they require our attention, but those fell out of the main focus of the research]{}
+
 \begin{itemize}
     \item Planning and power management.
+        Long-range navigation is limited by the energy capacity of the UGV and the efficiency of its spending.
     \item Environmental factors such as weather, light, and terrain complexity.
+        This parameter has to be mentioned, to clearly denote limitations of considered conditions.
     \item Real-time processing requirements.
+        The real-time processing of sensor data and decision-making are important for the robotisc, but we outline the problem and design solution in such a manner to allow for the relaxations on this requirement.
     \item Scalability and integration with ROS platforms.
+         As we touch lots of system aspects with limited resources, we will focus on the iterative implementations and open solutions.
 \end{itemize}
 \todo{Discuss relaxations on real-time requirements and focus on iterative implementations.}
 
@@ -214,7 +225,7 @@ The proposed research aims to:
 \end{itemize}
 \todo{Highlight the significance of open-source contributions and iterative validation in advancing the field.}
 
-\section{Datasets}
+\section{Datasets and Resources}
 A few datasets can serve as a basis for this research or as a sign of missing data:
 \begin{itemize}
     \item Wild Scenes Dataset: \url{https://arxiv.org/pdf/2404.18477}

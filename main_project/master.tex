@@ -43,7 +43,12 @@
 
 %
 % ============== Define custom TODO commands ===========================
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny, disable]{todonotes}
+\usepackage[
+  colorinlistoftodos,
+  prependcaption,
+  textsize=tiny,
+  % disable
+  ]{todonotes}
 
 \newcommand{\comment}[2][Comment]{\todo[inline,color=blue!20!white]{\textbf{#1}: #2}}
 \newcommand{\commentside}[2][Comment]{\todo[color=blue!20!white]{\textbf{#1}: #2}}
@@ -103,9 +108,10 @@
 \maketitle              % typeset the header of the contribution
 %
 
-\comment[does this type of work require "annotation" kind of block?]{}
+\comment[]{does this type of work require "annotation" kind of block?}
 
 \section{Introduction}
+
 Motivation for the topic of unstructured environments is multifaceted. Industries such as agriculture, mining, and military technology require advancements in autonomous systems, yet are hindered by the lack of open-source tools.
 \todo{Elaborate on why open tools are pivotal for industry advancements and research progress.}
 

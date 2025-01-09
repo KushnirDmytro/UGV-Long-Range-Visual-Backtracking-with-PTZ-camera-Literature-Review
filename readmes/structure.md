@@ -3,7 +3,32 @@
 ## Introduction: Motivation for the topic
 
 (+Here compile those from the typical papers, used in the literature list.)
-Lack of open systematic tools that are stopping the advancement of the field. Argiculture, mining, milteck, and other industries are in need of the technology and are impacted by the lack of the open-source tools.
+
+- Importance of robotics research is obvious thing, but we have to say a few lines about it.
+- Yet, there are limitations of innovation spread and drastic difference between the most developped robotics ecosystems and rest of the world.
+Unlike with mainstream AI, where computation can be placed on remote cloud and researchers can work wherever they want the most tools are opensourced.
+Robotics research and application scaling is lagging behind the mainstreem AI and general IT services.
+
+TODO: why we want to see exactly the ground robotics?
+
+Argiculture, mining, milteck, and other industries are in need of the technology and are impacted by the lack of the open-source tools.
+Now Robotics advancements are fostered inside the techical giants. It is natural, but does not stop us fromt the wish to spread its benefits for the most indengered peoples. Ground robotics will have impact for agriculture -- giving people the nutritional security, it will have its impact in mining industries -- replacing the hardest and most dengerous jobs. In the context of hard and dangerous jobs the applications in the millitary field is uterrmost. It can help to protect the life and freadom for the nations. While the agressive regeems can afford to finance the large centralized wartime economies, the nations under thread are those, who are smaller and trying to foster their yound democratic societies. Thouse nations cannot outcompete miltech giants, the grass-roots democratic initative result in large amount of diverse robotic systems called to protect the nation. The limitations here are rather specific -- need of standartization : requirements, resources, ubiquity of open technologies... With this focus and mindset for democratization technological access for the future we are conducting this work.
+
+Those factos are:
+- Common apporach of acccessible design tools:
+As UML once became one of the cornerstones of IT boom in software development, the SysML and, possibly MeROS will become the one of fruitfull branches of this tech.
+
+- Hardware Opensource limitations:
+Runnning ahead a bit we will talk about visual perception. OpenCV, started as the Intel project a long time ago, caused the explosion of CV.
+Yet, the limitting part and price-bar-factor is the optics, which remains closed. We will touch those issues as example.
+
+- Reusable tools:
+TODO (GPT): whith which technology we can compare the ROS, ROS2? In general IT and AI fields I meant.
+
+The ROS and ROS-based sensors are becomming one of the answers for the problems of open hardware limitations. You cam buy more "of the shelve" solutions and integrate them in the same system. You can balance your needs and budget and select from the diversity of equipment or even implement yuor own.
+
+Lack of open systematic tools that are stopping the advancement of the field. *this is statement from one of the papers "conclusive part", closer to the end, work in agricultire. We can push of this as point of count. There professor concluded that ROS advancements can become the saving circle to boost the speed of research.
+
 
 ### Note: probably about problem statement we and wtf is Unstructured Environment we should talk here.
 

@@ -13,7 +13,7 @@
 ]{biblatex}
 
 \usepackage{graphicx}
-% \usepackage{cite}
+% \usepackage{cite} % Incompatible with biblatex
 \usepackage{url}
 \usepackage{lipsum}                     % Dummytext
 \usepackage{xargs}                      % Use more than one optional parameter in a new commands
@@ -39,7 +39,6 @@
 \addbibresource{bibliography/zoom_calib.bib}
 
 \setcounter{page}{1}
-
 
 %
 % ============== Define custom TODO commands ===========================
@@ -97,16 +96,19 @@
   \endgroup
 }
 \makeatother
-\setcounter{tocdepth}{2} % Includes sections and subsections
+\setcounter{tocdepth}{3} % Includes sections and subsections
 
 % ============ END ToC Style ===============
 
 
 \begin{document}
+
+\sloppy % to avoid text going out of margins, compilation errors on formatting in development phase.
+
 %
 \title{
-  UGV Backtracking Recovery With Active Visual Landmarks Navigation:
-  Literature Review (Assignment)
+  UGV Long Range Backtracking Recovery in Unstructured Outdoors Environment Using Active Visual Landmarks Navigation:
+  Literature Review
 }
 
 \author{Dmytro Kushnir\orcidID{0009-0006-8652-5781} }
@@ -129,17 +131,38 @@
 
 \section{Introduction}
 
+\subsection{Motivation}
+
 Motivation for the topic of unstructured environments is multifaceted. Industries such as agriculture, mining, and military technology require advancements in autonomous systems, yet are hindered by the lack of open-source tools.
-\todo{Elaborate on why open tools are pivotal for industry advancements and research progress.}
+
+\todo{Elaborate on why opensource tools are pivotal for industry advancements and research progress.}
+
+\subsection{Problem Statement}
 
 \textbf{Problem Statement:} Defining unstructured environments and their specific challenges will provide clarity. These environments lack predefined landmarks, pose navigation difficulties, and require robust adaptable systems.
 
 \todo{Discuss what constitutes "unstructured environments" and why they are a significant research challenge.}
 
-\section{Methodology of review}
-This section outlines the approach to gathering and analyzing the literature.
+\subsection{Methodology of Review}
 
-\subsection{Specific Traits of Domain Literature}
+\comment[]{This section outlines the approach to gathering and analyzing the literature. We describe the systematic approach at first, then we "on practice" apply it to guide the literature review process.}
+
+\subsection{Structure of the Review}
+
+\comment[]{Naturally we decsribe the structure of this work and explain the logic of narration. With hyperreferences.}
+
+\section{Traits of Robotics Research Literature}
+
+\comment[]{ Here we put our findings, hypothesis, and general understanding of the field literature. Explain for non-robitics scholars what we are dealing with. Try to find support to hypothesis or mark them for the future bibliometric metaresearches.
+We elaborate on aspects that are valuable for literature review approaches selection.
+}
+
+\subsection{Public and Private SOTA}
+Contrast public SOTA with proprietary solutions. Highlight the reproducibility crisis in robotics academia due to platform-locked tools.
+\todo{Explore the coined term "Public SOTA" and its implications.}
+
+\subsection{Specific Traits of Outdoors UGV Domain Literature}
+
 Research in unstructured UGV robotics exhibits several distinguishing traits:
 \begin{itemize}
   \item Large-scale reviews or almanacs (aggregating 250+ papers) play a critical role in providing comprehensive overviews of the field.
@@ -149,15 +172,12 @@ Research in unstructured UGV robotics exhibits several distinguishing traits:
   \item The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
 \end{itemize}
 
-\subsection{Specific Traits}
-Discussion on specific traits of domain literature.
-
-\subsubsection{Citations Connectivity in Robotics Research}
+\subsection{Citations Connectivity in Robotics Research}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{img/There_is_no_place_like_home_research_tree.png}
-  \caption{Visual Teach-and-Repeat approach for emergency return of multirotor UAVs during GPS failure \cite{warren-ral19-no-place-like-Home}. More information is available on Connected Papers: \protect\url{https://www.connectedpapers.com/}.}
+  \caption{Visual Teach-and-Repeat approach for emergency return of multirotor UAVs during GPS failure \protect\cite{warren-ral19-no-place-like-Home}. More information is available on Connected Papers: \protect\url{https://www.connectedpapers.com/}.}
   \label{fig:no_place_like_home}
 \end{figure}
 
@@ -173,8 +193,11 @@ These differences show that citation-based snowballing approaches are less effec
 
 What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditions, versatility, robustness, and iterative improvements.
 
+\subsection{Large-Scale Reviews and Almanacs}
 
-\subsubsection{Challenge-Driven Clusters}
+Here we will write a bit and try to understand the reasons behind the unusual number and high quality of the large-scale reviews and almanacs in robotics research. \todo{Add more details and references.}
+
+\subsection{Man-made Challenge-Driven Clusters}
 
 There are expected "clusters" or "clogs" in the robotics research publications. Not only around the dedicated fields, problems, and laboratories which occur in a natural way in each field of research.
 The non-typical thing is research streamlined by strategic governmental organizations. The most well-known is DARPA. Now there are more of them, like MBZIRC. \todo{Add more later, support with citations.}
@@ -187,24 +210,46 @@ Challenges-based research in robotics emphasizes organized progress, such as DAR
 
 \todo{Amplify with examples of explosive technology disruptions, e.g., Kinect or ROS2.}
 
+\subsection{Other Traits}
 
-\subsection{Selection Criteria}
+\comment[Here we will accumulate smaller findings and hypothesis that are not developped into own subsections. Those can explain the main one, are derrived from them, etc.]{}
 
-\comment[Here we will meticulously deconstruct the whole challenge into a set of requirements, investigate the available set of approaches, tradeoffs, and design the solution aspects. The CORE of literature analysis in robotics will be here. In such a manner we will ensure that we are solving the actual large-scale problem applicable beyond our setup. ]{}
+\begin{itemize}
+  \item Academia is tied to the industrial RnD. The researchers have to use the same equipment for repeatability of results and ecosystem support.
+  \item Industry-lead researches: research kits of new devices are widely distributed specifically amongst the researchers and other contributors to the public domain.
+  \item Public domain stearing largely by the Private entities.
+  \item Different equipment on research and mature application stages.
+  \item Governemntal interests and policies involved in stearing the research programs. (More then in other fields.)
+\end{itemize}
 
+All listed above helps us to better understand, why the part of community that remain independent are so uncompromising on their rules and policies to reensure it.
+\comment[Here we are talking about unusual level of self-conscious and organization in Academy+PublicDomainCommunity in the field of robotics. ROS is one of those strategic project organized and nurished by them (companies as WillowGarage and etc.)]{}
 
-The following criteria guided the selection of papers for this review:
+\section{Design-Guided Literature Review}
+
+\comment[]{
+  At first about methodology of review that we propose.
+  Then we do the analysis of the problem and requirements.
+  Here we will meticulously deconstruct the whole challenge into a set of requirements, investigate the available set of approaches, tradeoffs, and design the solution aspects. The CORE of literature analysis in robotics will be here. In such a manner we will ensure that we are solving the actual large-scale problem applicable beyond our setup.
+}
+
+Additional factors that guided the literature review process include:
 \begin{itemize}
   \item Preference was given to studies with implementations adaptable to our platform or those offering detailed ground truth data demonstrations.
   \item Industry standards and widely adopted tools, especially those with robust GitHub repositories, community, and version updates were emphasized to ensure practical relevance and reproducibility.
 \end{itemize}
 
-
 \subsection{Analysis Framework}
+
+\comment[At first subsection we describe the analysis framework. In upcomming sections we use it and comment our findings.]{}
 
 The review leverages a structured "Task-Requirement-Design-Implementation-Validation" methodology.
 
-Steps that we do:
+\todo{Find sources that describe this methodology of design and research.}
+
+\textbf{
+ Steps fo that we do:
+}
 - Task: Select the problem we are dealing with: from the needs to the vision of the solution.
 - Requirement: Decompose task into some basic tasks, stages, states. Constraints also come here as the type of requirements. Decompose single iteration at once, maintain a higher level of abstraction.
 - Design:
@@ -216,36 +261,14 @@ Steps that we do:
 
 \todo{Include visual diagrams or reference placeholders for MeROS-based design layers.}
 
-\section{State-of-the-Art}
+\subsection{Task-Requirement-Design Analysis of the Problem}
 
-\comment{This is a Larger piece of text for ROS. Other aspects will be detailed in a similar fashion + add references}
+Here, when the spefific traits of the research field is mapped and analysis approach is selected, we should understand why this problem is not solved till this moment in selected conditions. Those limitations will be the requirements for the solution.
 
-\subsection{The Critical Role of the ROS Platform}
-The Robot Operating System (ROS) has emerged as a cornerstone technology in the robotics field, providing an open-source framework that standardizes development and fosters collaboration across academia and industry. Its modular architecture allows researchers and developers to integrate diverse hardware and software components, enabling rapid prototyping and scalability for a wide range of applications.
-
-One of ROS's most significant contributions is its community-driven ecosystem, where shared libraries, tools, and documentation accelerate innovation. ROS supports real-time applications, bridging the gap between laboratory research and field deployment. This feature has proven particularly valuable in unstructured environments, where dynamic conditions demand robust and flexible solutions. Moreover, the adoption of ROS by industry leaders has enhanced its relevance, making it a platform that seamlessly connects academic research with practical deployment.
-
-In the context of this review, ROS plays a pivotal role in the development of modular designs, such as the MeROS framework. By leveraging ROS's tools for sensor integration, motion planning, and communication, MeROS exemplifies how a standardized platform can streamline the design and validation of complex robotic systems. However, despite its strengths, ROS is not without limitations. Challenges such as real-time processing constraints, hardware compatibility, and dependency management persist, leaving room for further enhancements.
-
-\subsection{Mapping Approaches}
-Summarize current techniques in mapping for unstructured environments.
-\todo{Discuss strengths and limitations of existing methods.}
-
-\subsection{Visual Perception and PTZ Cameras}
-Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and requirement-based development.
-\todo{Include examples of modular designs and calibrations.}
-
-\subsection{Public and Private SOTA}
-Contrast public SOTA with proprietary solutions. Highlight the reproducibility crisis in robotics academia due to platform-locked tools.
-\todo{Explore the coined term "Public SOTA" and its implications.}
-
-\section{Research Gaps}
-
-\subsection{Task-Requirement-Design Identification}
-
-Here, when the Landscape of the research field is mapped, we should understand why this problem is not solved till this moment in selected conditions.
 This will give us a hypothesis that we will work with.
+
 For sure, when we are launching the research in any direction, the surrounding problems are also might be an issue. So beside of core research gaps (our main focus) we will need to pay attention to factors that are making risks for the solution.
+
 Some limitations of given design we should see from the design phase: we incorporate them consciously. They are derived from the whole collection of requirements in the most explicit way -- designed limitations are "the requirements that are not allocated or even mentioned". But the big part of limitations will come up only after the validation stage of research.
 
 Clarifying our goal as well (new ideas and vision of the problem has to rise from the first validation stage), we will map them as unallocated requirements and address them in the next iterations of the work.
@@ -257,26 +280,47 @@ Each iteration of the process will satisfy one or more new requirements.
 
 \todo{Place the example of work phases scheme. Example on how we will get to the PTZ camera is the best candidate.}
 
+\section{Problem Decomposition Outcomes}
 
-Core research gaps
+\comment[Here we have already decomposed problem, next step is to analyze each subfield separetely. Here we are doing the actual subject-by-subject review of the subfields fields.]{}
+
+\subsection{Primary Goals and Objectives}
+
 \comment[We will concentrate our research efforts on them specifically]{}
 
 \begin{itemize}
   \item PTZ camera integration challenges.
-  \item Long-range navigation in unstructured environments:
+  \item Long-range navigation in unstructured environments.
         \begin{itemize}
           \item Representation of places.
           \item Route following between places with minimal memorization.
         \end{itemize}
-  \item Encapsulation of independent software-hardware modules.
-  \item Cross-platform interfacing and requirements management.
-  \item Calibration and processing for open-source tools.
+  \item Encapsulation of system modules: software and hardware requirements.
+  \item Cross-platform interfacing requirements.
+  \item Calibration and data processing for open-source robotics.
 \end{itemize}
 
 \todo{Explore solutions like 360-degree cameras or alternative configurations.}
 
+\subsubsection{Mapping Approaches}
+Summarize current techniques in mapping for unstructured environments.
+\todo{Discuss strengths and limitations of existing methods.}
+
+\subsubsection{Visual Perception and Pan-Tilt-Zoom (PTZ) Cameras}
+Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and requirement-based development.
+\todo{Include examples of modular designs and calibrations.}
+
 \subsection{Constraints and Challenges}
-\comment[Those are factors that can have a decisive impact on the feasibility of the work and they require our attention, but those fell out of the main focus of the research]{}
+\comment[Here we review the "secondary objectives". Those are factors that can have a decisive impact on the feasibility of the task. Therefore they require our attention, but fell out of the main focus of the research]{}
+
+\subsubsection{Datasets and Resources}
+A few datasets can serve as a basis for this research or as a sign of missing data:
+\begin{itemize}
+  \item Wild Scenes Dataset: \url{https://arxiv.org/pdf/2404.18477}
+  \item Wild Places Dataset: \url{https://csiro-robotics.github.io/Wild-Places}
+  \item Freiburg Forest: \url{https://paperswithcode.com/dataset/freiburg-forest}
+\end{itemize}
+\todo{Note the gaps in available datasets and propose directions for addressing these limitations.}
 
 \begin{itemize}
   \item Planning and power management.
@@ -288,9 +332,39 @@ Core research gaps
   \item Scalability and integration with ROS platforms.
         As we touch lots of system aspects with limited resources, we will focus on the iterative implementations and open solutions.
 \end{itemize}
-\todo{Discuss relaxations on real-time requirements and focus on iterative implementations.}
 
-\section{Conclusion and Motivation}
+\todo[inline]{Discuss relaxations on real-time requirements and focus on iterative implementations.}
+
+\subsubsection{The Impact of the ROS-based Solutions}
+
+\comment{This is a Larger piece of text for ROS. Other aspects will be detailed in a similar fashion + add references}
+
+The Robot Operating System (ROS) has emerged as a cornerstone technology in the robotics field, providing an open-source framework that standardizes development and fosters collaboration across academia and industry. Its modular architecture allows researchers and developers to integrate diverse hardware and software components, enabling rapid prototyping and scalability for a wide range of applications.
+
+One of ROS's most significant contributions is its community-driven ecosystem, where shared libraries, tools, and documentation accelerate innovation. ROS supports real-time applications, bridging the gap between laboratory research and field deployment. This feature has proven particularly valuable in unstructured environments, where dynamic conditions demand robust and flexible solutions. Moreover, the adoption of ROS by industry leaders has enhanced its relevance, making it a platform that seamlessly connects academic research with practical deployment.
+
+In the context of this review, ROS plays a pivotal role in the development of modular designs, such as the MeROS framework. By leveraging ROS's tools for sensor integration, motion planning, and communication, MeROS exemplifies how a standardized platform can streamline the design and validation of complex robotic systems. However, despite its strengths, ROS is not without limitations. Challenges such as real-time processing constraints, hardware compatibility, and dependency management persist, leaving room for further enhancements.
+
+\subsection{System Limitations and Implementation Milestones}
+
+\comment[Here we will discuss the Limitations that we've faced during the validation-by-implementation]{}
+
+\section{Conclusion and Further Research Motivation}
+
+\comment{
+
+Overall here I want to say how this particular research is important in the field of UGV autonomy. But itself is just a POC of systematic approach to break the current limitations that are stopping this field of robotics.
+We discovered that the field requires methodological instruments to organize the RnD efforts.
+ That by iterations and achievement of the final goal of this project we will see if the field are succeptible to ours disruptions and what changes we should add to the methodology before the introducing it to the new schools of researchers.
+
+  - Summarize again the Goals->Pipeline->Particular outcomes.
+  - Discuss the potential impact of the research on the field.
+  - Highlight the significance of open-source contributions and iterative validation in advancing the field.
+  - Discuss the future work and the next steps.
+}
+
+\subsection{Why selected approach is an example of practice that can change the world?}
+
 The proposed research aims to:
 \begin{itemize}
   \item Emphasize modular design and cross-platform usability.
@@ -302,19 +376,13 @@ The proposed research aims to:
           \item Clear documentation and interfaces following MeROS philosophy.
         \end{itemize}
 \end{itemize}
+
 \todo{Highlight the significance of open-source contributions and iterative validation in advancing the field.}
 
-\section{Datasets and Resources}
-\todo{Place this as the SUBsection to the "Secondary goals and limitations" block}
-
-A few datasets can serve as a basis for this research or as a sign of missing data:
-\begin{itemize}
-  \item Wild Scenes Dataset: \url{https://arxiv.org/pdf/2404.18477}
-  \item Wild Places Dataset: \url{https://csiro-robotics.github.io/Wild-Places}
-  \item Freiburg Forest: \url{https://paperswithcode.com/dataset/freiburg-forest}
-\end{itemize}
-\todo{Note the gaps in available datasets and propose directions for addressing these limitations.}
-
+\subsection{Future Work}
+- Make the proper publication of the results.
+- Develop the system to the level of the prototype. This has to preclude the publication. We need to validate our Design and Literature findings at least on the feasibility level.
+- In the course of publication preparation also include other tools and approaches to validate some unsipported assumpions and hypothesis about research field structure: systematically use snowballing, citation analysis, and other tools to validate the structure of the field.
 
 \printbibliography
 

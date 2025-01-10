@@ -1,7 +1,3 @@
-% This is samplepaper.tex, a sample chapter demonstrating the
-% LLNCS macro package for Springer Computer Science proceedings;
-% Version 2.20 of 2017/10/04
-%
 \documentclass[runningheads]{llncs}
 
 \RequirePackage[
@@ -289,9 +285,10 @@ Each iteration of the process will satisfy one or more new requirements.
 \comment[We will concentrate our research efforts on them specifically]{}
 
 \begin{itemize}
-  \item PTZ camera integration challenges.
-  \item Long-range navigation in unstructured environments.
+  \item Active Visual Navigation: Pan-Tilt-Zoom camera and integration challenges.
+  \item Long-range Backtracking in unstructured environments.
         \begin{itemize}
+          \item No-map navigation recovery and its limitations.
           \item Representation of places.
           \item Route following between places with minimal memorization.
         \end{itemize}
@@ -300,20 +297,27 @@ Each iteration of the process will satisfy one or more new requirements.
   \item Calibration and data processing for open-source robotics.
 \end{itemize}
 
-\todo{Explore solutions like 360-degree cameras or alternative configurations.}
-
 \subsubsection{Mapping Approaches}
 Summarize current techniques in mapping for unstructured environments.
 \todo{Discuss strengths and limitations of existing methods.}
 
-\subsubsection{Visual Perception and Pan-Tilt-Zoom (PTZ) Cameras}
-Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and requirement-based development.
-\todo{Include examples of modular designs and calibrations.}
+\subsubsection{Active Visual Navigation: Applications of Pan-Tilt-Zoom (PTZ) Camera }
+
+\comment[]{Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and requirement-based development.
+}
+
+\todo[inline]{Include examples of modular designs and calibrations.}
+\todo[inline]{Explore alternative solutions tradeoffs, like 360-degree cameras or other configurations.}
+
+\paragraph{PTZ Camera Integration Challenges}
+
+\comment[Calibration and opensource limitations]{ We discover the entry barriers for the PTZ camera integration. The main problem is the lack of open-source calibration tools and the absence of standardized interfaces. We planned and started the research direction with first results. }
 
 \subsection{Constraints and Challenges}
 \comment[Here we review the "secondary objectives". Those are factors that can have a decisive impact on the feasibility of the task. Therefore they require our attention, but fell out of the main focus of the research]{}
 
-\subsubsection{Datasets and Resources}
+\subsubsection{Datasets}
+
 A few datasets can serve as a basis for this research or as a sign of missing data:
 \begin{itemize}
   \item Wild Scenes Dataset: \url{https://arxiv.org/pdf/2404.18477}
@@ -322,6 +326,11 @@ A few datasets can serve as a basis for this research or as a sign of missing da
 \end{itemize}
 \todo{Note the gaps in available datasets and propose directions for addressing these limitations.}
 
+\subsubsection{Simmulation Environments}
+
+\comment[]{ For evaluation of the agent's behavior and holistic autonomous system integration we will need the simulation environment. The most popular is Gazebo. But there are other solutions. We will review them and propose the best one for our research.}
+
+\subsubsection{Hardware Limits}
 \begin{itemize}
   \item Planning and power management.
         Long-range navigation is limited by the energy capacity of the UGV and the efficiency of its spending.
@@ -352,7 +361,6 @@ In the context of this review, ROS plays a pivotal role in the development of mo
 \section{Conclusion and Further Research Motivation}
 
 \comment{
-
 Overall here I want to say how this particular research is important in the field of UGV autonomy. But itself is just a POC of systematic approach to break the current limitations that are stopping this field of robotics.
 We discovered that the field requires methodological instruments to organize the RnD efforts.
  That by iterations and achievement of the final goal of this project we will see if the field are succeptible to ours disruptions and what changes we should add to the methodology before the introducing it to the new schools of researchers.
@@ -363,7 +371,6 @@ We discovered that the field requires methodological instruments to organize the
   - Discuss the future work and the next steps.
 }
 
-\subsection{Why selected approach is an example of practice that can change the world?}
 
 The proposed research aims to:
 \begin{itemize}
@@ -377,12 +384,21 @@ The proposed research aims to:
         \end{itemize}
 \end{itemize}
 
-\todo{Highlight the significance of open-source contributions and iterative validation in advancing the field.}
+\todo[inline]{Highlight the significance of open-source contributions and iterative validation in advancing the field.}
 
 \subsection{Future Work}
-- Make the proper publication of the results.
-- Develop the system to the level of the prototype. This has to preclude the publication. We need to validate our Design and Literature findings at least on the feasibility level.
-- In the course of publication preparation also include other tools and approaches to validate some unsipported assumpions and hypothesis about research field structure: systematically use snowballing, citation analysis, and other tools to validate the structure of the field.
+
+\begin{itemize}
+
+  \item Prepare the proper publication of the results.
+  \item Explore different \textbf{ Languages, beside English }, to find the most comprehensive set of the literature.
+  \item Develop the system to the level of first prototype. This has to preclude the publication. We need to validate our Design and Literature findings at least on the feasibility level.
+  \item In the course of publication preparation also include other tools and approaches to validate some unsipported assumpions and hypothesis about research field structure: systematically use snowballing, citation analysis, and other tools to validate the structure of the field.
+  \item Explore adjacent fields.
+  \item Do comparison with the other approaches. (Approach was not validated explicitly)
+  \item
+\end{itemize}
+
 
 \printbibliography
 

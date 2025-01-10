@@ -167,19 +167,19 @@ Robotics research often fragments across variables such as indoor versus outdoor
 
 This fragmentation explains why research frequently focuses on specific, everyday tasks that extend beyond current robotics capabilities. One example is the "returning home" problem, a fundamental yet challenging task. Relevant papers on such tasks tend to cluster around research centers, datasets, or individual experts.
 
-Unlike mainstream AI, which experiences terminological saturation, robotics remains more fragmented. For instance, the seminal robotics paper "FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002) has accrued approximately 3,500 citations in 20 years. In contrast, the AI paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018) achieved 50,000 citations in just five years. \todo{Add reference to resourses with citation statistics.}
+Unlike mainstream AI, which experiences terminological saturation, robotics remains more fragmented. For instance, the seminal robotics paper "FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002) has accrued approximately 3,500 citations in 20 years. In contrast, the AI paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018) achieved 50,000 citations in just five years. \todo{Add reference to resources with citation statistics.}
 
 These differences show that citation-based snowballing approaches are less effective for navigating robotics literature. Instead, comprehensive reviews, challenge-driven studies, and large-scale almanacs are better suited to understanding the field.
 
-What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditioins versatility robustness and iterative improvements.
+What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditions, versatility, robustness, and iterative improvements.
 
 
-\subsubsection{Challange-Driven Clusters}
+\subsubsection{Challenge-Driven Clusters}
 
-There are expected "clustes" or "clogs" in the robotics research publications. Not only around the dedicated fields, problems, laboratories which occur in natural way in each field of research.
-The non-typical thing are researches streamlined by the strategic governemntal oganizations. The most well known is DARPA. Now there are more of them, like MBZIRC. \todo{Add more later, support with citations.}
+There are expected "clusters" or "clogs" in the robotics research publications. Not only around the dedicated fields, problems, and laboratories which occur in a natural way in each field of research.
+The non-typical thing is research streamlined by strategic governmental organizations. The most well-known is DARPA. Now there are more of them, like MBZIRC. \todo{Add more later, support with citations.}
 
-Similar clusters are streamed by non-governemntal organizations: technical giants. \todo{describe the case of Kinect. Examples by Intel, OpenCV, Cameras series... }
+Similar clusters are streamed by non-governmental organizations: technical giants. \todo{describe the case of Kinect. Examples by Intel, OpenCV, Cameras series... }
 
 \todo{Think of more examples, that list could be extended for sure.}
 
@@ -188,15 +188,15 @@ Challenges-based research in robotics emphasizes organized progress, such as DAR
 \todo{Amplify with examples of explosive technology disruptions, e.g., Kinect or ROS2.}
 
 
-\subsection{Selection Criterias}
+\subsection{Selection Criteria}
 
-\comment[Here we will meticulously deconstruct the whole challange into set of requirements, investigate the available set of apporaches, tradeoffs and design the solution aspects. The CORE of literature analysis in robotics will be here. In such a manner we will ensure that we are solving the actual large-scale problem applicable beyond our setup. ]{}
+\comment[Here we will meticulously deconstruct the whole challenge into a set of requirements, investigate the available set of approaches, tradeoffs, and design the solution aspects. The CORE of literature analysis in robotics will be here. In such a manner we will ensure that we are solving the actual large-scale problem applicable beyond our setup. ]{}
 
 
 The following criteria guided the selection of papers for this review:
 \begin{itemize}
   \item Preference was given to studies with implementations adaptable to our platform or those offering detailed ground truth data demonstrations.
-  \item Industry standards and widely adopted tools, especially those with robust GitHub repositories, community and versions updates were emphasized to ensure practical relevance and reproducibility.
+  \item Industry standards and widely adopted tools, especially those with robust GitHub repositories, community, and version updates were emphasized to ensure practical relevance and reproducibility.
 \end{itemize}
 
 
@@ -205,20 +205,20 @@ The following criteria guided the selection of papers for this review:
 The review leverages a structured "Task-Requirement-Design-Implementation-Validation" methodology.
 
 Steps that we do:
-- Taks: Select the problem we are dealing with: from the needs to the vision of the solution.
-- Requirement: Decompose task into some basic tasks, stages, states. Constrains also comes here as the type of requirements. Decompose single iteration at once, maintain higher level of abstraction.
+- Task: Select the problem we are dealing with: from the needs to the vision of the solution.
+- Requirement: Decompose task into some basic tasks, stages, states. Constraints also come here as the type of requirements. Decompose single iteration at once, maintain a higher level of abstraction.
 - Design:
-  Here we have to envision the idea of the system that can satisfy those requirements on highest level. In Robotics the reusability is the key, so here we have to narrow the application domain and look for existing solutions.
+  Here we have to envision the idea of the system that can satisfy those requirements on the highest level. In Robotics, reusability is the key, so here we have to narrow the application domain and look for existing solutions.
 - Search the literature for the solutions that can satisfy the placed requirements.
 - Filter the results.
-  - Prioritiza the experiments or stages of implementations.
+  - Prioritize the experiments or stages of implementations.
 - "Allocate" the requirements to system components.
 
 \todo{Include visual diagrams or reference placeholders for MeROS-based design layers.}
 
 \section{State-of-the-Art}
 
-\comment{This is a Larger piece of text for ROS. Other aspects will be detailed in similar fashion + add references}
+\comment{This is a Larger piece of text for ROS. Other aspects will be detailed in a similar fashion + add references}
 
 \subsection{The Critical Role of the ROS Platform}
 The Robot Operating System (ROS) has emerged as a cornerstone technology in the robotics field, providing an open-source framework that standardizes development and fosters collaboration across academia and industry. Its modular architecture allows researchers and developers to integrate diverse hardware and software components, enabling rapid prototyping and scalability for a wide range of applications.
@@ -243,19 +243,19 @@ Contrast public SOTA with proprietary solutions. Highlight the reproducibility c
 
 \subsection{Task-Requirement-Design Identification}
 
-Here, when the Landscape of the research field is mapped, we should undestand why this problem is not solved till this moment in selected conditioins.
-This will give us hypothesis that we will work with.
+Here, when the Landscape of the research field is mapped, we should understand why this problem is not solved till this moment in selected conditions.
+This will give us a hypothesis that we will work with.
 For sure, when we are launching the research in any direction, the surrounding problems are also might be an issue. So beside of core research gaps (our main focus) we will need to pay attention to factors that are making risks for the solution.
-Some limitations of given design we should see from the design phase: we incorporate them counciously. They are derrived from the whole collection of requirements in the most explicit way -- designed limitations are "the requirements that are not allocated or even mentioned". But the big part of limitations will come up only after the validation stage of resaerch.
+Some limitations of given design we should see from the design phase: we incorporate them consciously. They are derived from the whole collection of requirements in the most explicit way -- designed limitations are "the requirements that are not allocated or even mentioned". But the big part of limitations will come up only after the validation stage of research.
 
-Clarifying our goal as well (new ideas and vision of the problem has to rise from the first validation stage), we will map  them as an unallocated requiments and address on the next iterations of the work.
+Clarifying our goal as well (new ideas and vision of the problem has to rise from the first validation stage), we will map them as unallocated requirements and address them in the next iterations of the work.
 
-First iteration should include the bare minimum of the requirements. This is the most dangerous part of the project, where we have the most uncertainty.
-From the first pilot implementation state we will be able to map the iterations towards the desired system with all requrements satisfied.
+The first iteration should include the bare minimum of the requirements. This is the most dangerous part of the project, where we have the most uncertainty.
+From the first pilot implementation state, we will be able to map the iterations towards the desired system with all requirements satisfied.
 
-Each iteration of the process will satisfy one or more new requirement.
+Each iteration of the process will satisfy one or more new requirements.
 
-\todo{Place the example of work phases scheme. Example on how we will get to the PTZ camera is best candidate.}
+\todo{Place the example of work phases scheme. Example on how we will get to the PTZ camera is the best candidate.}
 
 
 Core research gaps
@@ -276,7 +276,7 @@ Core research gaps
 \todo{Explore solutions like 360-degree cameras or alternative configurations.}
 
 \subsection{Constraints and Challenges}
-\comment[Those are factors that can have decisive impact on feasibility of the work and they require our attention, but those fell out of the main focus of the research]{}
+\comment[Those are factors that can have a decisive impact on the feasibility of the work and they require our attention, but those fell out of the main focus of the research]{}
 
 \begin{itemize}
   \item Planning and power management.
@@ -284,7 +284,7 @@ Core research gaps
   \item Environmental factors such as weather, light, and terrain complexity.
         This parameter has to be mentioned, to clearly denote limitations of considered conditions.
   \item Real-time processing requirements.
-        The real-time processing of sensor data and decision-making are important for the robotisc, but we outline the problem and design solution in such a manner to allow for the relaxations on this requirement.
+        The real-time processing of sensor data and decision-making are important for robotics, but we outline the problem and design solution in such a manner to allow for the relaxations on this requirement.
   \item Scalability and integration with ROS platforms.
         As we touch lots of system aspects with limited resources, we will focus on the iterative implementations and open solutions.
 \end{itemize}

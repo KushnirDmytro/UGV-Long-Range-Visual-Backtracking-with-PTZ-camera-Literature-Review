@@ -78,14 +78,29 @@
                                     {\normalfont\normalsize\bfseries}}
 \makeatother
 
-%\urlstyle{same}
+% ============ BEGIN ToC Style ============
 
-% Used for displaying a sample figure. If possible, figure files should
-% be included in EPS format.
-%
-% If you use the hyperref package, please uncomment the following line
-% to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+% Define the ToC style:
+% - skip the document title itself in the ToC
+% - include sections and subsections in ToC
+\makeatletter
+% Keep a copy of LNCS’s original \maketitle
+\let\origlncsMaketitle\maketitle
+
+\renewcommand{\maketitle}{%
+  \begingroup
+    % Disable \addcontentsline while the title is created
+    \let\savedaddcontentsline\addcontentsline
+    \renewcommand{\addcontentsline}[3]{}
+    % Call LNCS's original macro
+    \origlncsMaketitle
+  \endgroup
+}
+\makeatother
+\setcounter{tocdepth}{2} % Includes sections and subsections
+
+% ============ END ToC Style ===============
+
 
 \begin{document}
 %
@@ -108,8 +123,7 @@
 \maketitle              % typeset the header of the contribution
 %
 
-\todo{Add proper TableOfContents}
-% \tableofcontents
+\tableofcontents
 
 \comment[]{does this type of work require "annotation" kind of block?}
 

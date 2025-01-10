@@ -161,37 +161,41 @@ The review is organized as follows:
 
 \section{Bibliometric Traits of Robotics Research Literature}
 
-\comment[]{ This section highlights findings, hypotheses, and key observations in robotics literature, aiming to guide literature review methodology and explain its context to non-specialists. }
+The field of robotics research, particularly in unstructured environments, is characterized by distinct bibliometric and thematic traits. Unlike mainstream AI, robotics research often lacks the volume of publications and citation density seen in other fields, instead focusing on comprehensive reviews, challenge-driven advancements, and iterative problem-solving. The interplay between academia, industry, and organized competitions such as DARPA and MBZIRC has cultivated unique research clusters, while the absence of standardized benchmarks often hinders cross-comparisons. This section explores these characteristics, highlighting the influence of industrial RnD, public and private SOTA disparities, and connectivity patterns in robotics literature. Understanding these traits provides a framework for navigating and analyzing the field's literature effectively.
 
 \subsection{Factors in Robotics Domain}
+
 Research in unstructured UGV robotics specifically impacted by next factors, which are not typical for other robotics domains:
 
- \paragraph{Large-scale reviews or almanacs}
-  (aggregating 250+ papers) play a critical role in providing comprehensive overviews of the field. Here we will write a bit and try to understand the reasons behind the unusual number and high quality of the large-scale reviews and almanacs in robotics research.
-  \todo{Add more details and references to existing researches from the bibliography.}
+\paragraph{Large-scale reviews or almanacs}
+Large-scale reviews are essential in robotics research due to the field's interdisciplinary nature. Robotics encompasses diverse subdomains such as hardware integration, software algorithms, control theory, and application-specific requirements, making it impossible for individual researchers to maintain expertise in all areas. These reviews, such as \cite{hausler2024towards} and \cite{vidanapathirana_wildscenes_2024}, compile advancements and methodologies across these domains, providing a consolidated resource for researchers and practitioners. The large scale compendiums that can include over 250 papers as \cite{min_autonomous_2024} dedicated to the specific applicatinon domain had become usual in the field.
 
-\paragraph{The Volume of publications} is significantly smaller than in mainstream AI, where research output is orders of magnitude higher.
+The fragmented nature of robotics underscores the importance of these reviews. By synthesizing hundreds of studies, these almanacs become indispensable tools for researchers to stay updated. Specialists with narrow expertise often collaborate across multiple teams, addressing diverse application fields in high-impact areas. These reviews help them navigate complex challenges and align their efforts with the broader research community.
 
-Unlike mainstream AI, which experiences terminological saturation, robotics remains more fragmented. For instance, the seminal robotics paper "FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002) has accrued approximately 3,500 citations in 20 years. In contrast, the AI paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018) achieved 50,000 citations in just five years. \todo{Add reference to resources with citation statistics.}
+\todo[inline]{More of large review papers will be added from the list of actually used ones.}
+
+\paragraph{The Volume of publications}
+is significantly smaller than in mainstream AI, where research output is orders of magnitude higher.
+
+Unlike mainstream AI, which experiences terminological saturation, robotics remains more fragmented. For instance, the seminal robotics paper "FastSLAM: A factored solution to the simultaneous localization and mapping problem" (2002) has accrued approximately 3,500 citations in 20 years. In contrast, the AI paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" (2018) achieved 50,000 citations in just five years.
+\todo{Add reference to resources with citation statistics.}
 
 These differences show that citation-based snowballing approaches are less effective for navigating robotics literature. Instead, classic analysis of comprehensive reviews, challenge-driven studies, and large-scale almanacs are better suited to understanding the field.
 
 \paragraph{Man-made Challenge-Driven Clusters}
- Research initiatives, such as DARPA and MBZIRC challenges, drive progress by clustering studies around specific problems.
+Research initiatives, such as DARPA and MBZIRC challenges, drive progress by clustering studies around specific problems. For instance, DARPA's Subterranean Challenge has significantly advanced autonomous underground exploration capabilities by incentivizing teams to tackle challenges like sensor robustness and mapping in GPS-denied environments. Similarly, MBZIRC challenges have driven breakthroughs in aerial robotics by focusing on applications such as drone-based object retrieval and autonomous swarm coordination. These challenges not only spur innovation but also create "research clusters" that persist long after the competitions end.
 
-   There are expected "clusters" or "clogs" in the robotics research publications. Not only around the dedicated fields, problems, and laboratories which occur in a natural way in each field of research.
-  The non-typical thing is research streamlined by strategic governmental organizations. The most well-known is DARPA. Now there are more of them, like MBZIRC.
+\todo{Add more examples, support with citations.}
 
- \todo{Add something later, support with citations.}
+\paragraph{Industry-lead Researches}
+The research kits of new devices are widely distributed specifically amongst the researchers and other contributors to the public domain. Similar clusters are streamed by non-governmental organizations: technical giants.
+\todo{describe the case of Kinect. Examples by Intel, OpenCV, Cameras series... }
 
-  \paragraph{Industry-lead Researches}
-  The research kits of new devices are widely distributed specifically amongst the researchers and other contributors to the public domain.
-  Similar clusters are streamed by non-governmental organizations: technical giants.
-  \todo{describe the case of Kinect. Examples by Intel, OpenCV, Cameras series... }
 
-  \paragraph{Long-term stationary groups.} Research is typically long-term and conducted by well-established teams with access to substantial resources.
+\paragraph{Long-term stationary groups.}
+Research is typically long-term and conducted by well-established teams with access to substantial resources.
 
-  \paragraph{Poor comparison ground.} The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
+\paragraph{Poor comparison ground.} The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
 
   What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditions, versatility, robustness, and iterative improvements.
 
@@ -233,7 +237,6 @@ The papers in this field are well connected, and the research is often conducted
 All listed above helps us to better understand, why the part of community that remain independent are so uncompromising on their rules and policies to reensure it.
 
 \comment[]{Here we are talking about unusual level of self-conscious and organization in Academy+PublicDomainCommunity in the field of robotics. ROS is one of those strategic project organized and nurished by them (companies as WillowGarage and etc.)}
-
 
 
 \section{Design-Guided Literature Review}

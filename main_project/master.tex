@@ -183,6 +183,12 @@ Unlike mainstream AI, which experiences terminological saturation, robotics rema
 These differences show that citation-based snowballing approaches are less effective for navigating robotics literature. Instead, classic analysis of comprehensive reviews, challenge-driven studies, and large-scale almanacs are better suited to understanding the field.
 
 \paragraph{Man-made Challenge-Driven Clusters}
+
+\todo[inline]{ Add Amazon Robotics Challenge (ARC) }
+\todo[inline]{ Add other european challenges. European Land Robot Trial (ELROB). }
+\todo[inline]{ Add some robotic sports challenges }
+
+
 Research initiatives, such as DARPA and MBZIRC challenges, drive progress by clustering studies around specific problems. For instance, DARPA's Subterranean Challenge has significantly advanced autonomous underground exploration capabilities by incentivizing teams to tackle challenges like sensor robustness and mapping in GPS-denied environments. Similarly, MBZIRC challenges have driven breakthroughs in aerial robotics by focusing on applications such as drone-based object retrieval and autonomous swarm coordination. These challenges not only spur innovation but also create "research clusters" that persist long after the competitions end.
 
 \todo{Add more examples, support with citations.}
@@ -196,21 +202,127 @@ Research is typically long-term and conducted by well-established teams with acc
 
 \todo[inline]{Here we will track the active list of research groups and laboratories that are working in our fields of interest}
 
-\textbf{Research groups:}
+\subsection{Research groups}
+
+Here we list (mostly) stationary research groups and laboratories. Those are usually concentrated around the univiersities and beside of papers produce solid Master and Ph.D. thesis works.
+
 \begin{itemize}
-  \item **Autonomous Space Robotics Lab (ASRL), University of Toronto** \cite{autonomous_space_robotics_lab_asrl_autonomous_2020}
+  \item \textbf{Autonomous Space Robotics Lab (ASRL), University of Toronto} \cite{autonomous_space_robotics_lab_asrl_autonomous_2020}
   URL: [http://asrl.utias.utoronto.ca/](http://asrl.utias.utoronto.ca/)
   Focus: Topological navigation, SLAM, visual landmark detection.
+
+  https://www.unibw.de/tas-en
+
+  \item **Technical University of Munich, Chair of Robotics, Artificial Intelligence and Real-time Systems** \cite{noauthor_chair_2024}
+
+
+
+  Impressive list of publications: [https://www.unibw.de/tas/publikationen]
+
+  \item  ** Freiburg University, particularly the Autonomous Intelligent Systems (AIS) ** group
+  % URL: [http://ais.informatik.uni-freiburg.de](http://ais.informatik.uni-freiburg.de/index_en.php)
+  Focus: Simultaneous Localization and Mapping (SLAM), motion planning, and sensor fusion.
+  % \todo[inline]{Add comments on the research groups and their impact on the field.}
+
 \end{itemize}
 
-\textbf{Individual Researchers:}
+% ======== END: Research groups  =========
+
+\subsection{Research Individuals:}
+
+\todo{This image will illustrate the imact of the individuals in the field of robotics research.}
+
+% \begin{figure}[ht]
+%   \centering
+%   \includegraphics[width=\linewidth]{img/Example_of_person_tracking.png}
+%   \caption{ Illustration of "stalking research":
+
+%   D. Hull. (2017, Okt.) The PayPal Mafia of Self-Driving Cars Has Been at It a
+% Decade. Bloomberg. [Online]. Verfügbar: https://www.bloomberg.com/news/
+% features/2017-10-30/it-s-been-10-years-since-robots-proved-they-could-drive
+%   }
+%   \label{fig:example_of_person_tracking}
+
+% \end{figure}
+
+
+% \textbf{Individual Res  earchers:}
+% \begin{itemize}
+%   \item **Rodney Brooks** \cite{noauthor_rodney_2025}
+%   Wikipedia: [https://en.wikipedia.org/wiki/Rodney_Brooks](https://en.wikipedia.org/wiki/Rodney_Brooks)
+%   Contributions: Pioneer of subsumption architecture; foundational work in robotics and AI.
+% \end{itemize}
+
+% ======== END: Research Individuals =========
+
+
+\subsection{Research Projects}
+
+Here we will collect the most influencial reseaerch projects. The collaborative nature of robotics research encourages the interdisciplinary problem-driven projects. Each of them connects the research groups and individuals in the field.
+
+\todo{replace placeholder with the actual list of projects}
+
+% \begin{itemize}
+
+  % \item **Robot Operating System (ROS)** \cite{quigley_ros:_2009}
+  % URL: [http://www.ros.org/](http://www.ros.org/)
+  % Focus: Open-source robotics middleware, modular design, and cross-platform compatibility.
+
+  % \item **OpenSLAM** \cite{noauthor_openslam_2024}
+  % URL: [https://openslam.org/](https://openslam.org/)
+  % Focus: Open-source SLAM libraries, benchmark datasets, and community-driven development.
+
+% \end{itemize}
+
+
+
+\subsection{ Standards and regulations }
+
+Here we list the standards in related fields of in-road autonomous driving,
+autonomous vehicles regulations in mining, agriculture, and other fields that are related to the UGV autonomy.
+Those are best sources of bast codified terms, parctices, evaluation metrics
+and other things that are adopted by regulating bodies and industry leaders, therefore encompasses the fruits of research and practical experience.
+
 \begin{itemize}
-  \item **Rodney Brooks** \cite{noauthor_rodney_2025}
-  Wikipedia: [https://en.wikipedia.org/wiki/Rodney_Brooks](https://en.wikipedia.org/wiki/Rodney_Brooks)
-  Contributions: Pioneer of subsumption architecture; foundational work in robotics and AI.
+  \todo[inline]{Items are generated, needs manula revision and links to the actual standards. Probably should be seriously cut: group into main and secondary. Those, that are in development make the most sense. This is a start... [https://chatgpt.com/share/6796b14e-c914-800c-9131-df9935943cdb] }
+
+  \item \textbf{ISO 26262 – Road Vehicles: Functional Safety:} This standard addresses the functional safety of electrical and electronic systems in road vehicles. It provides a framework for identifying and mitigating risks associated with system failures, which is crucial for ensuring the safe operation of autonomous functions like "return home" behaviors.
+
+  \item \textbf{ISO 21448 – Road Vehicles: Safety of the Intended Functionality (SOTIF):} ISO 21448 focuses on ensuring that the intended functionalities of a system do not lead to unsafe situations, especially in the absence of system faults. For autonomous navigation, this involves assessing and mitigating risks arising from performance limitations or unexpected environmental conditions.
+
+  \item \textbf{ISO/TS 5083 – Road Vehicles: Safety for Automated Driving Systems:} This technical specification provides guidance on developing and validating automated driving systems, emphasizing safety considerations throughout the design and deployment phases. It is applicable to vehicles in various environments, including off-road scenarios.
+
+  \item \textbf{ISO 17757:2017 – Earth-Moving Machinery and Mining: Autonomous and Semi-Autonomous Machine System Safety:} This standard specifies safety requirements for autonomous and semi-autonomous machines used in earth-moving and mining operations. It focuses on system safety, addressing hazards associated with autonomous functions and providing guidelines for mitigating risks in off-road environments.
+
+  \item \textbf{ISO 3502 – Reference Framework and Architecture for Advanced Automation and Autonomy in Mining Systems:} Currently under development, ISO 3502 aims to establish a reference framework and architecture for advanced automation and autonomy in mining systems. This standard will provide structured guidance for implementing autonomous functionalities, including navigation and "return home" behaviors, in mining operations.
+
+  \item \textbf{ISO 3991 – Safety Standard for Robotic Feed Systems Related to Agricultural Dairy and Livestock Machinery:} Also under development, ISO 3991 is a safety standard focusing on robotic feed systems in agricultural settings. While its primary application is in agriculture, the safety principles outlined may offer insights applicable to autonomous systems in off-road environments.
+
+  \item \textbf{ISO 18497 Series – Agricultural Machinery and Tractors: Safety of Partially Automated, Semi-Autonomous, and Autonomous Machinery: }
+
+  \todo[inline]{fix nested lists issues for parts of this standard}
+
+  \begin{itemize}
+    \item \textbf{ ISO 18497-1:2024:} This part specifies design principles for agricultural machinery and tractors with partially automated, semi-autonomous, or autonomous functions. It focuses on ensuring safety during various operational modes.
+    \item textbf{ISO 18497-2:2024:} This part outlines principles for designing obstacle protective systems in agricultural machinery and tractors, aiming to prevent collisions and enhance operational safety.
+  \end{itemize}
+
+  \item \textbf{ISO 25119 – Tractors and Machinery for Agriculture and Forestry: Safety-Related Parts of Control Systems:} This standard provides a framework for the functional safety of electrical and electronic control systems in agricultural and forestry machinery. It emphasizes a risk-based approach to design and development, ensuring that control systems perform safely under various conditions.
+
+  \item \textbf{ISO 11783 – Tractors and Machinery for Agriculture and Forestry: Serial Control and Communications Data Network (ISOBUS):}   Commonly known as \textbf{ISOBUS}, this standard defines a communication protocol for agricultural equipment, facilitating interoperability between tractors and implements. It ensures that autonomous systems can communicate effectively, which is crucial for coordinated operations and implementing "return home" functions.
+
+  \item \textbf{ASTM F3218-17 – Standard Practice for Recording Environmental Effects for Utilization with A-UGV Test Methods:} Published by ASTM International, this standard outlines practices for documenting environmental conditions during testing of automated unmanned ground vehicles (A-UGVs). It aids in understanding how different environmental factors impact A-UGV performance, which is essential for developing reliable "return home" behaviors in off-road terrains.
+
+  \item \textbf{ANSI/UL 4600 – Standard for Safety for the Evaluation of Autonomous Products:} This standard encompasses fully autonomous systems, including UGVs, and provides safety principles for their evaluation. It covers aspects such as risk assessment, testing methodologies, and lifecycle considerations, ensuring a comprehensive safety evaluation.
+
+  \item \textbf{SAE Ground Vehicle Standards:} The Society of Automotive Engineers (SAE) has developed a comprehensive suite of standards addressing various aspects of ground vehicle design, safety, and performance. While not exclusively focused on off-road autonomous vehicles, these standards provide foundational guidance that can be applied to UGVs operating in challenging terrains. Topics covered include vehicle design, crashworthiness, braking systems, and tire performance, all of which are pertinent to ensuring the reliability and safety of off-road UGVs.
+
+  \item \textbf{Safe Mobile Autonomous Mining in Western Australia – Code of Practice:} This code of practice offers practical guidance for implementing mobile autonomous mining systems, emphasizing occupational safety and health standards. Although specific to Western Australia, the principles outlined are universally applicable and provide valuable insights into the safe deployment of autonomous systems in mining operations. The document covers risk management, system safety, and operational considerations essential for developing reliable "return home" behaviors in UGVs.
+
 \end{itemize}
 
-\paragraph{Poor comparison ground.} The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
+
+\subsection{Poor comparison ground.} The field lacks standardized benchmarks or datasets, making cross-comparisons between studies challenging.
 
   What matters most in this field is the careful formulation of problems and the requirements they impose. These requirements drive the system design of solutions, followed by implementation and validation. Unlike AI, where isolated benchmarks play a central role, robotics focuses on real-world conditions, versatility, robustness, and iterative improvements.
 
@@ -341,7 +453,7 @@ Each iteration of the process will satisfy one or more new requirements.
 Summarize current techniques in mapping for unstructured environments.
 \todo{Discuss strengths and limitations of existing methods.}
 
-\subsubsection{Active Visual Navigation: Applications of Pan-Tilt-Zoom (PTZ) Camera }
+\subsubsection{Active Visual Navigation: Applications of Pan-Tilt-Zoom (PTZ)  Camera }
 
 \comment[]{Discuss the role of PTZ cameras in UGV platforms, emphasizing modular design and requirement-based development.
 }
